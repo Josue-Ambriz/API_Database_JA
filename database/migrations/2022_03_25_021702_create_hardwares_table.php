@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('storage');
             $table->string('invoice');
             $table->string('price', 8, 2);
-            $table->dateTime(purchased_on);
+            $table->dateTime('purchased_on');
             $table->timestamps();
         });
     }
