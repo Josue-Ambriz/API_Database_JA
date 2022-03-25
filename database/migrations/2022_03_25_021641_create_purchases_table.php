@@ -16,10 +16,9 @@ return new class extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->integer('invoice');
-            //$table->foreignId('user_id');
+            $table->foreignId('user_id');
             $table->foreignId('hardware_id');
             $table->dateTime('purchased_on');
-            
             $table->timestamps();
         });
     }
