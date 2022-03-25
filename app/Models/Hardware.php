@@ -9,5 +9,4 @@ class Hardware extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'cpu', 'ram', 'storage', 'invoice', 'price', 'purchased_on'];
-    //protected $table = 'hardware';
 }
