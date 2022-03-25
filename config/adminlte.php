@@ -243,7 +243,7 @@ return [
         ],
         
         [
-            'type' => 'Equipment',
+            'text' => 'Equipment',
             'url' => 'equipment',
             'icon' => 'x',
         ],
