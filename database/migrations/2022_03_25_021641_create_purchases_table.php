@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
+            $table->integer(price);
+            $table->foreignId(user_id);
+            $table->foreignId(_id);
+            $table->dateTime(last_purchased);
+            
             $table->timestamps();
         });
     }
