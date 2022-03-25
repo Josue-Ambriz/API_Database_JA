@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
-            $table->integer('price');
+            $table->integer('invoice');
             //$table->foreignId('user_id');
             $table->foreignId('hardware_id');
             $table->dateTime('last_purchased');
