@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('hardwares', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('cpu');
+            $table->string('ram');
+            $table->string('storage');
+            $table->string('price', 8, 2);
+            $table->dateTime(purchased_on);
             $table->timestamps();
         });
     }
