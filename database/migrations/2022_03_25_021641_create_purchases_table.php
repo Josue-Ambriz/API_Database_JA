@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('invoice');
             //$table->foreignId('user_id');
             $table->foreignId('hardware_id');
-            $table->dateTime('last_purchased');
+            $table->dateTime('purchased_on');
             
             $table->timestamps();
         });
