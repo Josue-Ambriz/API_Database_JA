@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('cpu');
             $table->string('ram');
             $table->string('storage');
+            $table->string('invoice');
             $table->string('price', 8, 2);
             $table->dateTime(purchased_on);
             $table->timestamps();
