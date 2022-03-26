@@ -245,26 +245,20 @@ return [
         [
             'text' => 'Equipment',
             'url' => 'equipment',
-            'icon' => 'x',
+            'icon' => 'fas fa-fw fa-file',
         ],
         
         [
             'text' => 'User Info',
             'url'  => 'userinfo',
-            'icon' => 'x',
+            'icon' => 'fas fa-fw fa-file',
         ],
         
         [         
-            'text' => 'Sales Contact Info',
-            'url'  => 'manufacturer_sales',
-            'icon' => 'x',
+            'text' => 'Manufacturer',
+            'url'  => 'manufacturer',
+            'icon' => 'fas fa-fw fa-file',
         ],
-        
-        [
-            'text' => 'Tech Support',
-            'url'  => 'manufacturer_support',
-            'icon' => 'x',
-        ]
     ],
         
     /*
