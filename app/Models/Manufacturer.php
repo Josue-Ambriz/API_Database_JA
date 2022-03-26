@@ -9,5 +9,5 @@ class Manufacturer extends Model
 {
     use HasFactory;
     protected $fillable = ['sales_name', 'sales_email', 'sales_number', 'tech_name', 'tech_email', 'tech_number'];
-    //protected $table = 'manufacturers';
+    protected $table = 'manufacturers';
 }
