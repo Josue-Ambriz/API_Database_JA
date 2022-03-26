@@ -244,13 +244,13 @@ return [
         
         [
             'text' => 'Equipment',
-            'url' => 'equipment',
+            'url' => 'equipments',
             'icon' => 'fas fa-fw fa-file',
         ],
         
         [
             'text' => 'User Info',
-            'url'  => 'userinfo',
+            'url'  => 'userinfos',
             'icon' => 'fas fa-fw fa-file',
         ],
         
