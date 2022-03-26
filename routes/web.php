@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ManufacturerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,13 @@ URL::forceScheme('https');
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/manufacturer', function () {
+    return view('manufacturer');
+});
+
+Route::resource('/manufacturer', ManufacturerController::class);
+
 
 Route::get('/db-test', function () {
     try {         
