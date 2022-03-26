@@ -256,7 +256,7 @@ return [
         
         [         
             'text' => 'Manufacturer',
-            'url'  => 'manufacturer',
+            'url'  => 'manufacturers',
             'icon' => 'fas fa-fw fa-file',
         ],
     ],
