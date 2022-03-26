@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/manufacturer', function () {
-    return view('manufacturer');
+    return view('manufacturers');
 });
 
 Route::resource('/manufacturer', ManufacturerController::class);
