@@ -20,11 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/manufacturers', function () {
-    return view('manufacturers');
+Route::get('/manufacturer', function () {
+    return view('manufacturer');
 });
 
-Route::resource('/manufacturers', ManufacturerController::class);
+Route::resource('/manufacturer', ManufacturerController::class);
 
 
 Route::get('/db-test', function () {
