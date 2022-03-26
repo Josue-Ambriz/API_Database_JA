@@ -14,8 +14,8 @@ class ManufacturerController extends Controller
      */
     public function index()
     {
-        $events = Calendar::select('title', 'starting AS start', 'ending AS end')->get();
-        return json_encode(compact('events')['events'] );
+        $manufacturers = Manufacturer::all();
+        return view('manufacturers', compact('manufacturers'));
     } 
 
    /**
@@ -25,7 +25,7 @@ class ManufacturerController extends Controller
      */
     public function create()
     {
-        return view('calendars.create');
+        return view('manufacturers.create');
     }
 
     /**
@@ -37,18 +37,24 @@ class ManufacturerController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([ 
-           'title' => 'required',
-           'starting' => 'required',
-           'ending' => 'required',
+           'sales_name' => 'required',
+           'sales_email' => 'required',
+           'sales_number' => 'required',
+           'tech_name' => 'required',
+           'tech_email' => 'required',
+           'tech_number' => 'required',
         ]);
         
-       $calendar = Calendar::create([
-            'title' => $request->title,
-            'starting' => date($request->starting),
-            'ending' => date($request->ending), 
+       $manufacturer = Manufacturer::create([
+            'sales_name' => $request->sales_name,
+            'sales_email' => $request->sales_email,
+            'sales_number' => $request->sales_number,
+            'tech_name' => $request->tech_name,
+            'tech_email' => $request->tech_email,
+            'tech_number' => $request->tech_number,
         ]);
         
-        return redirect('/calendar');
+        return $this->index();
     }
 
     /**
@@ -59,8 +65,8 @@ class ManufacturerController extends Controller
      */
     public function show($id)
     {
-        $calendar = Calendar::find($id);
-        return view('calendars.show',compact('calendars'));
+        $manufacturer = Manufacturer::find($id);
+        return view('manufacturers.show',compact('manufacturer'));
     }
         
     /**
