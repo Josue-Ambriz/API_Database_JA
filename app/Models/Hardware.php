@@ -4,9 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Hardware extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'cpu', 'ram', 'storage', 'invoice', 'price', 'purchased_on'];
+    use SoftDeletes;
+    protected $fillable = ['name', 'cpu', 'ram', 'storage', 'service', 'software', 'price'];
+    
+    public function 
+    
 }
