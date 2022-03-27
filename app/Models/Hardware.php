@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App/Models/HWCategory;
 use App/Models/Manufacturer;
 use App/Models/Purchase;
-use App/Models/Equipment;
 
 class Hardware extends Model
 {
@@ -29,10 +28,5 @@ class Hardware extends Model
     public function purchase()
     {
         return $this->hasOne(Purchase::class);
-    }
-    
-    public function equipment()
-    {
-        return $this->hasMany(Equipment::class);
     }
 }
