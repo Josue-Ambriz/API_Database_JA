@@ -15,6 +15,6 @@ class ContactInfo extends Model
     
     public function hardware()
     {
-        return $this->hasMany(Hardware::class);
+        return $this->hasOne(Hardware::class);
     }
 }
