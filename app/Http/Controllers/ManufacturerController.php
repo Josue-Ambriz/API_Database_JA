@@ -103,4 +103,3 @@ class ManufacturerController extends Controller
         //
     }
 }
-kkk
