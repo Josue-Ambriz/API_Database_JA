@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App/Models/HWCategory;
 use App/Models/Manufacturer;
 use App/Models/Purchase;
-use App/Models/UserInfo;
+use App/Models/Equipment;
 
 class Hardware extends Model
 {
