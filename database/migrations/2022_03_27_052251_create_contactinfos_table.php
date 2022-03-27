@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('contactinfos', function (Blueprint $table) {
             $table->id();
+            $table->string('sales_name');
+            $table->string('sales_email');
+            $table->string('sales_number');
+            $table->string('tech_name');
+            $table->string('tech_email');
+            $table->string('tech_number');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
