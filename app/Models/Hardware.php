@@ -10,6 +10,7 @@ use App/Models/Manufacturer;
 use App/Models/Purchase;
 use App/Models/UserInfo;
 
+
 class Hardware extends Model
 {
     use HasFactory;
