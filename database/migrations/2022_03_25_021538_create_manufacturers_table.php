@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('tech_name');
             $table->string('tech_email');
             $table->string('tech_number');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
