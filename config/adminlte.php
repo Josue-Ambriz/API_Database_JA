@@ -262,6 +262,7 @@ return [
                     'url'  => 'categories',
                     'icon' => 'fas fa-fw fa-file',
                 ],
+            ],
         ],
 
         [
