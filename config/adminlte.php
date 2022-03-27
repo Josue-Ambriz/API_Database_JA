@@ -244,19 +244,41 @@ return [
         
         [
             'text' => 'Equipment',
-            'url' => 'equipments',
-            'icon' => 'fas fa-fw fa-file',
+            'icon' => 'fas fa-fw fa-desktop',
+            'submenu' => [
+                
+                [
+                    'text' => 'Current Equipment List',
+                    'url'  => 'lists',
+                    'icon' => 'fas fa-fw fa-file',
+                ],
+                [
+                    'text' => 'By Manufacturer',
+                    'url'  => 'manufacturers',
+                    'icon' => 'fas fa-fw fa-file',
+                ],
+                [
+                    'text' => 'By Category',
+                    'url'  => 'categories',
+                    'icon' => 'fas fa-fw fa-file',
+                ],
         ],
-        
+
         [
             'text' => 'User Info',
             'url'  => 'userinfos',
             'icon' => 'fas fa-fw fa-file',
         ],
-        
+
         [         
-            'text' => 'Manufacturer',
-            'url'  => 'manufacturers',
+            'text' => 'Purchases',
+            'url'  => 'purchases',
+            'icon' => 'fas fa-fw fa-money-bill-alt',
+        ],
+        
+        [
+            'text' => 'Contact Information',
+            'url'  => 'contactinfos',
             'icon' => 'fas fa-fw fa-file',
         ],
     ],
