@@ -35,9 +35,9 @@
 <a href="{{ route('manufacturers.create') }} " class="btn btn-primary" >Add</a>
 @stop
 
-<!@section('css')
+@section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-@stop!>
+@stop
 
 @section('js')
 <script>
