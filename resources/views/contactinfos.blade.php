@@ -19,7 +19,6 @@
 
         @foreach($contactinfos AS $contactinfo)
         <tr>
-          <td>{{ $contactinfo->id }}</td>
           <td>{{ $contactinfo->sales_name }}</td>
           <td>{{ $contactinfo->sales_email }}</td>
           <td>{{ $contactinfo->sales_number }}</td>
