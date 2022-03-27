@@ -14,7 +14,7 @@ class ContactInfoController extends Controller
      */
     public function index()
     {
-        $contactinfos = Manufacturer::all();
+        $contactinfos = ContactInfo::all();
         return view('contactinfos', compact('contactinfos'));
     }
 
