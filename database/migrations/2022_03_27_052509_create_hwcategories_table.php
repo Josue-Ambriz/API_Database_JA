@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('hwcategories', function (Blueprint $table) {
             $table->id();
-            $table->string(Type);
+            $table->string('Type');
             $table->softDeletes();
             $table->timestamps();
         });
