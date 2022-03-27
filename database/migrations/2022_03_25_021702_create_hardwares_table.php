@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('ram');
             $table->string('storage');
             $table->integer('price');
-            $table->foreignIdFor(App\Models\::class)->constrained();
-            $table->foreignIdFor(App\Models\::class)->constrained();
+            $table->foreignIdFor(App\Models\Manufacturer::class)->constrained();
+            $table->foreignIdFor(App\Models\HWCategory::class)->constrained();
             $table->softDeletes();
             $table->timestamps();
         });
