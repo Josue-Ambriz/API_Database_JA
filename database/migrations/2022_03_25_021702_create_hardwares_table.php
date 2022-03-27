@@ -19,9 +19,10 @@ return new class extends Migration
             $table->string('cpu');
             $table->string('ram');
             $table->string('storage');
-            $table->string('invoice');
-            $table->string('price', 8, 2);
-            $table->dateTime('purchased_on');
+            $table->integer('price');
+            $table->foreignIdFor(App\Models\::class)->constrained();
+            $table->foreignIdFor(App\Models\::class)->constrained();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
