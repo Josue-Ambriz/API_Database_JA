@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManufacturerController;
+use App\Http\Controllers\ContactInfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,12 @@ Route::get('/manufacturers', function () {
 });
 
 Route::resource('/manufacturers', ManufacturerController::class);
+
+Route::get('/contactinfos', function () {
+    return view('contactinfos');
+});
+
+Route::resource('/contactinfos', ContactInfoController::class);
 
 
 Route::get('/db-test', function () {
