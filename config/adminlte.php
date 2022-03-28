@@ -248,8 +248,8 @@ return [
             'submenu' => [
                 
                 [
-                    'text' => 'Current Equipment List',
-                    'url'  => 'lists',
+                    'text' => 'Hardware List',
+                    'url'  => 'hardwares',
                     'icon' => 'fas fa-fw fa-file',
                 ],
                 [
