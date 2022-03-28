@@ -25,19 +25,16 @@ Route::get('/', function () {
 Route::get('/manufacturers', function () {
     return view('manufacturers');
 });
-
 Route::resource('/manufacturers', ManufacturerController::class);
 
 Route::get('/contactinfos', function () {
     return view('contactinfos');
 });
-
 Route::resource('/contactinfos', ContactInfoController::class);
 
 Route::get('/hardwares', function () {
     return view('hardwares');
 });
-
 Route::resource('/hardwares', HardwareController::class);
 
 
