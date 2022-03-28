@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
-            $table->integer('invoice');
+            $table->string('invoice');
             $table->integer('price');
             $table->dateTime('purchased_on');
-            $table->softDeletes();
             $table->timestamps();
         });
     }
