@@ -42,9 +42,7 @@ class HardwareController extends Controller
            'cpu' => 'required',
            'ram' => 'required',
            'storage' => 'required',
-           'service' => 'required',
            'software' => 'required',
-           'price' => 'required',
            'manufacturer_id' => 'required',
         ]);
         
@@ -54,9 +52,7 @@ class HardwareController extends Controller
             'cpu' => $request->cpu,
             'ram' => $request->ram,
             'storage' => $request->storage,
-            'service' => $request->service,
             'software' => $request->software,
-            'price' => $request->price,
             'manufacturer_id' => $request->manufacturer_id,        
         ]);
         
