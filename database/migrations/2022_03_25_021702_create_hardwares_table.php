@@ -16,15 +16,13 @@ return new class extends Migration
         Schema::create('hardwares', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignIdFor(App\Models\HWCategory::class)->constrained();
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->string('cpu');
             $table->string('ram');
             $table->string('storage');
             $table->string('service');
             $table->string('software');
-            $table->integer('price');
             $table->foreignIdFor(App\Models\Manufacturer::class)->constrained();
-            $table->softDeletes();
             $table->timestamps();
         });
     }
