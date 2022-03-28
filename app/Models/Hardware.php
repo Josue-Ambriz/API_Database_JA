@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\HWCategory;
 use App\Models\Manufacturer;
 use App\Models\Purchase;
@@ -13,7 +12,6 @@ use App\Models\UserInfo;
 class Hardware extends Model
 {
     use HasFactory;
-    use SoftDeletes;
     protected $fillable = ['name', 'hwcategory_id', 'cpu', 'ram', 'storage', 'software', 'price', 'manufacturer_id'];
     protected $table = 'hardwares';
     
