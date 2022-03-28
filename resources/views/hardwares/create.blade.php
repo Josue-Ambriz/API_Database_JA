@@ -22,7 +22,6 @@
         placeholder="Please choose one,"/>
     <x-adminlte-input name="price" label="Price Value," />
     <x-adminlte-input name="manufacturer_id" label="Manufacturer Information," />
-    </x-adminlte-select>
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
