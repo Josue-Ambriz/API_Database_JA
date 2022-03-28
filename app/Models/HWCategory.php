@@ -9,7 +9,7 @@ use App\Models\Hardware;
 class HWCategory extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+    //use SoftDeletes;
     protected $fillable = ['Type'];
 
     public function hardware()
