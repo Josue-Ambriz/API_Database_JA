@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ContactInfoController;
+use App\Http\Controllers\HardwareController;
 
 /*
 |--------------------------------------------------------------------------
