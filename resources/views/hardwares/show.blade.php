@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Contact Information')
+@section('title', 'Hardware')
 
 @section('content_header')
-    <h1>Contact Information</h1>
+    <h1>Hardware Has Been Added</h1>
 @stop
 
 @section('content')
