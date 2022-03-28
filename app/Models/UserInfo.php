@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Hardware;
 use App\Models\Purchase;
+use App\Models\Hardware;
 
 class UserInfo extends Model
 {
