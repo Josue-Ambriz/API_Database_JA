@@ -12,7 +12,7 @@ class Note extends Model
     protected $fillable = ['note', 'hardware_id', 'service'];
 }
 
-public function userinfo()
+public function hardware()
 {
-    return $this->belongsTo(UserInfo::class);
+    return $this->belongsTo(Hardware::class);
 }
