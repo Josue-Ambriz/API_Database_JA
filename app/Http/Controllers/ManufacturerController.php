@@ -37,19 +37,17 @@ class ManufacturerController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([ 
-           'sales_name' => 'required',
+           'company' => 'required',
            'sales_email' => 'required',
            'sales_number' => 'required',
-           'tech_name' => 'required',
            'tech_email' => 'required',
            'tech_number' => 'required',
         ]);
         
        $manufacturer = Manufacturer::create([
-            'sales_name' => $request->sales_name,
+            'company' => $request->company,
             'sales_email' => $request->sales_email,
             'sales_number' => $request->sales_number,
-            'tech_name' => $request->tech_name,
             'tech_email' => $request->tech_email,
             'tech_number' => $request->tech_number,
         ]);
@@ -77,7 +75,8 @@ class ManufacturerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $manufacturer = Manufacturer::find($id);
+        return view('manufacturers.edit',compact('manufacturer'));
     }
 
     /**
@@ -89,7 +88,23 @@ class ManufacturerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([ 
+            'company' => 'required',
+           'sales_email' => 'required',
+           'sales_number' => 'required',
+           'tech_email' => 'required',
+           'tech_number' => 'required',
+        ]);
+        
+       $manufacturer = Manufacturer::where('id', $id)->update([
+            'company' => $request->company,
+            'sales_email' => $request->sales_email,
+            'sales_number' => $request->sales_number,
+            'tech_email' => $request->tech_email,
+            'tech_number' => $request->tech_number,
+        ]);
+        
+        return $this->show($id);
     }
 
     /**
@@ -100,6 +115,6 @@ class ManufacturerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }
