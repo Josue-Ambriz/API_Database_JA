@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('hwcategories', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->foreignId('hardwares_id')->onstrained('hardwares');
             $table->timestamps();
         });
     }
