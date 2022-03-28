@@ -43,9 +43,9 @@ class ContactInfoController extends Controller
         ]);
         
        $contactinfo = ContactInfo::create([
-            'owner' => $request->owner,
-            'info' => $request->info,
-            'email' => $request->email,
+           'owner' => $request->owner,
+           'info' => $request->info,
+           'email' => $request->email,
         ]);
         
         return $this->index();
@@ -60,7 +60,7 @@ class ContactInfoController extends Controller
     public function show($id)
     {
         $contactinfo = ContactInfo::find($id);
-        return view('contactinfos.show',compact('contactinfo'));
+        return view('contactinfos.show',compact('hwcategory'));
     }
         
     /**
@@ -71,7 +71,8 @@ class ContactInfoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contactinfo = ContactInfo::find($id);
+        return view('contactinfos.edit',compact('hwcategory'));
     }
 
     /**
@@ -83,7 +84,18 @@ class ContactInfoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'owner' => 'required',
+            'info' => 'required',
+            'email' => 'required',
+        ]);
+
+        $contactinfo = ContactInfo::where('id',$id)->update([
+            'owner' => $request->owner,
+            'info' => $request->info,
+            'email' => $request->email,
+        ]);
+        return $this->show($id);
     }
 
     /**
@@ -94,6 +106,7 @@ class ContactInfoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contactinfo = ContactInfo::where('id', $id)->delete();
+        return $this->index();
     }
 }
