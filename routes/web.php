@@ -34,11 +34,11 @@ Route::get('/contactinfos', function () {
 
 Route::resource('/contactinfos', ContactInfoController::class);
 
-Route::get('/lists', function () {
-    return view('lists');
+Route::get('/hardwares', function () {
+    return view('hardwares');
 });
 
-Route::resource('/lists', HardwareController::class);
+Route::resource('/hardwares', HardwareController::class);
 
 
 Route::get('/db-test', function () {
