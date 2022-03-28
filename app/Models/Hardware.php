@@ -32,6 +32,6 @@ class Hardware extends Model
     
         public function userinfo()
     {
-        return $this->belongsTo(UserInfo::class);
+        return $this->hasMany(UserInfo::class);
     }
 }
