@@ -10,7 +10,7 @@ use App\Models\Hardware;
 class Purchase extends Model
 {
     use HasFactory;
-    protected $fillable = ['invoice', 'price', 'hardware_id', 'userinfo', 'purchased_on';
+    protected $fillable = ['invoice', 'price', 'hardware_id', 'userinfo_id', 'purchased_on';
    
    public function userinfo()
    {
