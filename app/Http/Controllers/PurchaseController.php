@@ -4,4 +4,4 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserInfoController extends Controller
+class PurchaseController extends Controller
