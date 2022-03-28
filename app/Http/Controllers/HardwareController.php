@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Hardware;
+use App\Models\HWCategory;
+use App\Models\Manufacturer;
 
 class HardwareController extends Controller
 {
@@ -14,8 +16,10 @@ class HardwareController extends Controller
      */
     public function index()
     {
-        $hardwares = Hardware::all(); 
-        return view('hardwares', compact('hardwares'));
+        $hardwares = Hardware::all();
+        $hwcategories = HWCategory::all();
+        $manufacturers = Manufacturer::all();
+        return view('hardwares', compact('hardwares', 'hwcategories', 'manufacturers'));
     }
 
    /**
