@@ -11,7 +11,7 @@ class ContactInfo extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $fillable = ['sales_name', 'sales_email', 'sales_number', 'tech_name', 'tech_email', 'tech_number'];
+    protected $fillable = ['owner', 'info', 'email'];
     protected $table = 'contactinfos';
     
     public function hardware()
