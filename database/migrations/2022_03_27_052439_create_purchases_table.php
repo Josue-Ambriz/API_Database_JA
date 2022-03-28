@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('invoice');
             $table->integer('price');
-            $table->dateTime('purchased_on');
+            $table->date('purchased_on');
             $table->timestamps();
         });
     }
