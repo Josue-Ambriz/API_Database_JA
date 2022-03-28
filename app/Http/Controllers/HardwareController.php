@@ -14,8 +14,8 @@ class HardwareController extends Controller
      */
     public function index()
     {
-        $manufacturers = Manufacturer::all();
-        return view('manufacturers', compact('manufacturers'));
+        $hardwares = Hardware::all();
+        return view('hardwares', compact('hardwares'));
     }
 
    /**
@@ -25,7 +25,7 @@ class HardwareController extends Controller
      */
     public function create()
     {
-        return view('manufacturers.create');
+        return view('hardwares.create');
     }
 
     /**
@@ -37,21 +37,27 @@ class HardwareController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([ 
-           'sales_name' => 'required',
-           'sales_email' => 'required',
-           'sales_number' => 'required',
-           'tech_name' => 'required',
-           'tech_email' => 'required',
-           'tech_number' => 'required',
+           'name' => 'required',
+           'hwcategory_id' => 'required',
+           'cpu' => 'required',
+           'ram' => 'required',
+           'storage' => 'required',
+           'service' => 'required',
+           'software' => 'required',
+           'price' => 'required',
+           'manufacturer_id' => 'required',
         ]);
         
-       $manufacturer = Manufacturer::create([
-            'sales_name' => $request->sales_name,
-            'sales_email' => $request->sales_email,
-            'sales_number' => $request->sales_number,
-            'tech_name' => $request->tech_name,
-            'tech_email' => $request->tech_email,
-            'tech_number' => $request->tech_number,
+       $hardware = Hardware::create([
+            'name' => $request->name,
+            'hwcategory_id' => $request->hwcategory_id,
+            'cpu' => $request->cpu,
+            'ram' => $request->ram,
+            'storage' => $request->storage,
+            'service' => $request->service,
+            'software' => $request->software,
+            'price' => $request->price,
+            'manufacturer_id' => $request->manufacturer_id,        
         ]);
         
         return $this->index();
@@ -65,8 +71,8 @@ class HardwareController extends Controller
      */
     public function show($id)
     {
-        $manufacturer = Manufacturer::find($id);
-        return view('manufacturers.show',compact('manufacturer'));
+        $hardware = Hardware::find($id);
+        return view('hardwares.show',compact('hardware'));
     }
         
     /**
