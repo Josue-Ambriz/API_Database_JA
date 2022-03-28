@@ -35,7 +35,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('contactinfos.create') }} " class="btn btn-primary" >Add</a>
+<a href="{{ route('hardwares.create') }} " class="btn btn-primary" >Add</a>
 @stop
 
 @section('css')
