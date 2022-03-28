@@ -84,7 +84,9 @@ class HWCategoryController extends Controller
             'type' => 'required',
         ]);
 
-        $hwcategory = HWCategory::where('id',$id)->update(['type'=>$request->type]);
+        $hwcategory = HWCategory::where('id',$id)->update([
+            'type' => $request->type
+        ]);
         return $this->show($id);
     }
 
