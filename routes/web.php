@@ -50,3 +50,8 @@ Route::get('/db-migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
 });
+
+Route::get('/db-migrate-refresh', function () {
+    Artisan::call('migrate:refresh');
+    echo Artisan::output();
+});
