@@ -15,7 +15,7 @@ class Hardware extends Model
     use HasFactory;
     use SoftDeletes;
     protected $fillable = ['name', 'hwcategory_id', 'cpu', 'ram', 'storage', 'service', 'software', 'price', 'manufacturer_id'];
-    //protected $table = 'hardwares';
+    protected $table = 'hardwares';
     
     public function hwcategory()
     {
