@@ -83,7 +83,11 @@ class HardwareController extends Controller
      */
     public function edit($id)
     {
-        //
+        $hwcategories = HWCategory::all();
+        $manufacturers = Manufacturer::all();
+
+        $hardware = Hardware::find($id);
+        return view('hardwares.edit', compact('hardware', 'hwcategories', 'manufacturers'));
     }
 
     /**
@@ -95,7 +99,27 @@ class HardwareController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([ 
+           'name' => 'required',
+           'hwcategory_id' => 'required',
+           'cpu' => 'required',
+           'ram' => 'required',
+           'storage' => 'required',
+           'software' => 'required',
+           'manufacturer_id' => 'required',
+        ]);
+        
+       $hardware = Hardware::create([
+            'name' => $request->name,
+            'hwcategory_id' => $request->hwcategory_id,
+            'cpu' => $request->cpu,
+            'ram' => $request->ram,
+            'storage' => $request->storage,
+            'software' => $request->software,
+            'manufacturer_id' => $request->manufacturer_id,        
+        ]);
+        
+        return $this->index();
     }
 
     /**
@@ -106,6 +130,7 @@ class HardwareController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $hardware = Hardware::find($id);
+        
     }
 }
