@@ -89,7 +89,7 @@ class ManufacturerController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([ 
-            'company' => 'required',
+           'company' => 'required',
            'sales_email' => 'required',
            'sales_number' => 'required',
            'tech_email' => 'required',
