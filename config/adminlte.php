@@ -250,12 +250,12 @@ return [
                 [
                     'text' => 'Hardware List',
                     'url'  => 'hardwares',
-                    'icon' => 'fas fa-fw fa-file',
+                    'icon' => 'fas fa-fw fa-list',
                 ],
                 [
                     'text' => 'By Manufacturer',
                     'url'  => 'manufacturers',
-                    'icon' => 'fas fa-fw fa-file',
+                    'icon' => 'fas fa-fw fa-hdd',
                 ],
                 [
                     'text' => 'By Category',
@@ -270,17 +270,23 @@ return [
             'url'  => 'userinfos',
             'icon' => 'fas fa-fw fa-file',
         ],
-
-        [         
+        
+        [
             'text' => 'Purchases',
             'url'  => 'purchases',
-            'icon' => 'fas fa-fw fa-money-bill-alt',
+            'icon' => 'fas fa-fw fa-money-bill-wave',
         ],
         
         [
-            'text' => 'Contact Information',
+            'text' => 'Notes',
+            'url'  => 'notes',
+            'icon' => 'fas fa-fw fa-sticky-note',
+        ],
+        
+        [
+            'text' => 'Website Information',
             'url'  => 'contactinfos',
-            'icon' => 'fas fa-fw fa-file',
+            'icon' => 'fas fa-fw fa-store',
         ],
     ],
         
