@@ -40,8 +40,8 @@ class HWCategoryController extends Controller
            'type' => 'required',
         ]);
         
-       $manufacturer = Manufacturer::create([
-            'type' => $request->owner,
+       $hwcategory = HWCategory::create([
+            'type' => $request->type,
         ]);
         
         return $this->index();
@@ -67,7 +67,8 @@ class HWCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $hwcategory = HWCategory::find($id);
+        return view('hwcategories.edit',compact('hwcategory'));
     }
 
     /**
@@ -79,7 +80,11 @@ class HWCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validate([
+            'type' => 'required',]);
+
+        $hwcategory = HWCategory::where('id',$id)->update(['type'=>$request->type]);
+        return $this->show($id);
     }
 
     /**
@@ -90,7 +95,8 @@ class HWCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $hwcategory = HWCategory::where('id', $id)->delete();
+        return $this->index();
     }
 }
 
