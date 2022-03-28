@@ -18,7 +18,6 @@ return new class extends Migration
             $table->text('note');
             $table->foreignId('hardware_id')->constrained('hardwares');
             $table->string('service');
-            $table->id();
             $table->timestamps();
         });
     }
