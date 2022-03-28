@@ -35,7 +35,7 @@ Route::get('/contactinfos', function () {
 Route::resource('/contactinfos', ContactInfoController::class);
 
 Route::get('/lists', function () {
-    return view('hardwares');
+    return view('lists');
 });
 
 Route::resource('/lists', HardwareController::class);
