@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('cpu');
             $table->string('ram');
             $table->string('storage');
-            $table->string('service');
             $table->string('software');
             $table->foreignId('manufacturer_id')->constrained('manufacturers')->onDelete('cascade');
             $table->timestamps();
