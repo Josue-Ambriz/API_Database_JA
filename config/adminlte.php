@@ -268,7 +268,7 @@ return [
         [
             'text' => 'User Info',
             'url'  => 'userinfos',
-            'icon' => 'fas fa-fw fa-circle',
+            'icon' => 'fas fa-fw fa-user-circle',
         ],
         
         [
