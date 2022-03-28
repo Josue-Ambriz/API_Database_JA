@@ -3,7 +3,7 @@
 @section('title', 'List of Hardwares in Our Inventory')
 
 @section('content_header')
-    <h1>List of Hardwares in Our Inventory</h1>
+    <h1>Add Hardware</h1>
 @stop
 
 @section('content')
