@@ -60,7 +60,7 @@ class ContactInfoController extends Controller
     public function show($id)
     {
         $contactinfo = ContactInfo::find($id);
-        return view('contactinfos.show',compact('hwcategory'));
+        return view('contactinfos.show',compact('contactinfo'));
     }
         
     /**
@@ -72,7 +72,7 @@ class ContactInfoController extends Controller
     public function edit($id)
     {
         $contactinfo = ContactInfo::find($id);
-        return view('contactinfos.edit',compact('hwcategory'));
+        return view('contactinfos.edit',compact('contactinfo'));
     }
 
     /**
