@@ -81,7 +81,8 @@ class HWCategoryController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'type' => 'required',]);
+            'type' => 'required',
+        ]);
 
         $hwcategory = HWCategory::where('id',$id)->update(['type'=>$request->type]);
         return $this->show($id);
