@@ -37,21 +37,15 @@ class ContactInfoController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([ 
-           'sales_name' => 'required',
-           'sales_email' => 'required',
-           'sales_number' => 'required',
-           'tech_name' => 'required',
-           'tech_email' => 'required',
-           'tech_number' => 'required',
+           'owner' => 'required',
+           'info' => 'required',
+           'email' => 'required',
         ]);
         
        $contactinfo = ContactInfo::create([
-            'sales_name' => $request->sales_name,
-            'sales_email' => $request->sales_email,
-            'sales_number' => $request->sales_number,
-            'tech_name' => $request->tech_name,
-            'tech_email' => $request->tech_email,
-            'tech_number' => $request->tech_number,
+            'owner' => $request->owner,
+            'info' => $request->info,
+            'email' => $request->email,
         ]);
         
         return $this->index();
