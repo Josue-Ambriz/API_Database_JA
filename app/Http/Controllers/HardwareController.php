@@ -109,7 +109,7 @@ class HardwareController extends Controller
            'manufacturer_id' => 'required',
         ]);
         
-       $hardware = Hardware::create([
+       $hardware = Hardware::where('id', $id)->([
             'name' => $request->name,
             'hwcategory_id' => $request->hwcategory_id,
             'cpu' => $request->cpu,
@@ -119,7 +119,7 @@ class HardwareController extends Controller
             'manufacturer_id' => $request->manufacturer_id,        
         ]);
         
-        return $this->index();
+        return $this->show($id);
     }
 
     /**
@@ -130,7 +130,8 @@ class HardwareController extends Controller
      */
     public function destroy($id)
     {
-        $hardware = Hardware::find($id);
+        $hardware = Hardware::where('id', $id)->delete();
+        return $this->index();
         
     }
 }
