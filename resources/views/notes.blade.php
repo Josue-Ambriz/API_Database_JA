@@ -21,7 +21,7 @@
         <tr>
           <td>{{ $note->id }}</td>
           <td>{{ $note->note }}</td>
-          <td>{{ $note->hardware_id }}</td>
+          <td>{{ $note->purchase_id }}</td>
           <td>{{ $note->service }}</td>
           <td><a class="btn btn-default btn-sm" href="{{ route('notes.show',['note'=>$note->id]) }}">View</a></td>
         </tr>
