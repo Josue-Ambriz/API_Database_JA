@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Note;
-use App\Models\Purchase;
+use App\Models\Hardware;
 
 class NoteController extends Controller
 {
@@ -16,8 +16,8 @@ class NoteController extends Controller
     public function index()
     {
         $notes = Notes::all();
-        $purchases = Purchase::all();
-        return view('notes', compact('notes', 'purchases'));
+        $hardwares = Hardware::all();
+        return view('notes', compact('notes', 'hardwares'));
     }
 
    /**
@@ -27,7 +27,8 @@ class NoteController extends Controller
      */
     public function create()
     {
-        return view('notes.create');
+        $hardwares = Hardware::all();
+        return view('notes.create', compact('hardwares'));
     }
 
     /**
@@ -42,16 +43,12 @@ class NoteController extends Controller
            'note' => 'required',
            'hardware_id' => 'required',
            'service' => 'required',
-           'tech_email' => 'required',
-           'tech_number' => 'required',
         ]);
         
        $manufacturer = Manufacturer::create([
-            'company' => $request->company,
-            'sales_email' => $request->sales_email,
-            'sales_number' => $request->sales_number,
-            'tech_email' => $request->tech_email,
-            'tech_number' => $request->tech_number,
+            'note' => $request->note,
+            'hardware_id' => $request->hardware_id,
+            'service' => $request->sales_number,
         ]);
         
         return $this->index();
@@ -65,8 +62,8 @@ class NoteController extends Controller
      */
     public function show($id)
     {
-        $manufacturer = Manufacturer::find($id);
-        return view('manufacturers.show',compact('manufacturer'));
+        $note = Note::find($id);
+        return view('notes.show',compact('note'));
     }
         
     /**
@@ -77,8 +74,9 @@ class NoteController extends Controller
      */
     public function edit($id)
     {
-        $manufacturer = Manufacturer::find($id);
-        return view('manufacturers.edit',compact('manufacturer'));
+        $hardwares = Hardware::all();
+        $note = Note::find($id);
+        return view('notes.edit',compact('note', 'hardwares'));
     }
 
     /**
@@ -91,19 +89,15 @@ class NoteController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([ 
-           'company' => 'required',
-           'sales_email' => 'required',
-           'sales_number' => 'required',
-           'tech_email' => 'required',
-           'tech_number' => 'required',
+           'note' => 'required',
+           'hardware_id' => 'required',
+           'service' => 'required',
         ]);
         
-       $manufacturer = Manufacturer::where('id', $id)->update([
-            'company' => $request->company,
-            'sales_email' => $request->sales_email,
-            'sales_number' => $request->sales_number,
-            'tech_email' => $request->tech_email,
-            'tech_number' => $request->tech_number,
+       $note = Note::where('id', $id)->update([
+            'note' => $request->note,
+            'hardware_id' => $request->hardware_id,
+            'service' => $request->service,
         ]);
         
         return $this->show($id);
@@ -117,7 +111,7 @@ class NoteController extends Controller
      */
     public function destroy($id)
     {
-      $manufacturer = Manufacturer::where('id', $id)->delete();
+      $note = Note::where('id', $id)->delete();
       return $this->index();
     }
 }
