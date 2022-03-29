@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>Note</th><th>Hardware ID</th><th>Service</th>
+          <th style="width: 10px">#</th><th>Note</th><th>Purchase ID</th><th>Service</th>
         </tr>
       </thead>
       <tbody>
