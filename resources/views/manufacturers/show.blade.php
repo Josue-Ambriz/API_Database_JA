@@ -20,7 +20,7 @@
             @csrf
             <form style="display:inline;" class="delete" action="{{route('manufacturers.destroy', ['manufacturer'=>$manufacturer->id])}}" method="post">
             @method('delete')
-            <input type="submit" class="btn btn-danger">Delete</button>
+            <button type="submit" class="btn btn-danger">Delete</button>
             @csrf
             </form>
         </div>
