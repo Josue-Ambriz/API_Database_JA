@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'List of Hardwares in Our Inventory')
+@section('title', 'Add Hardware')
 
 @section('content_header')
     <h1>Add Hardware</h1>
@@ -16,11 +16,9 @@
     <x-adminlte-input name="cpu" label="CPU Information," />
     <x-adminlte-input name="ram" label="RAM Information" />
     <x-adminlte-input name="storage" label="Storage Information," />
-    <x-adminlte-input name="service" label="Service Informaton," />
     <x-adminlte-input name="software" label="Software of electronic equipment," />
     <x-adminlte-options :options="['Orbis OS (Playstation Only)', 'Windows', 'Linux', 'Andriod', 'Apple iOS']"
         placeholder="Please choose one,"/>
-    <x-adminlte-input name="price" label="Price Value," />
     <x-adminlte-input name="manufacturer_id" label="Manufacturer Information," />
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
