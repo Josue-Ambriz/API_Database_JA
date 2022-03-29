@@ -110,7 +110,7 @@ class HardwareController extends Controller
            'manufacturer_id' => 'required',
         ]);
         
-       $hardware = Hardware::where('id', $id)->([
+       $hardware = Hardware::where('id', $id)->update([
             'name' => $request->name,
             'hwcategory_id' => $request->hwcategory_id,
             'cpu' => $request->cpu,
