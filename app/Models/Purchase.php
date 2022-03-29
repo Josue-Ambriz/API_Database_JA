@@ -20,7 +20,7 @@ class Purchase extends Model
                            
     public function hardware()
     {
-        return $this->hasOne(Hardware::class);
+        return $this->belongsTo(Hardware::class);
     }
     
     public function note()
