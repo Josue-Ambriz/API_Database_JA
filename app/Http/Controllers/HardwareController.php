@@ -17,9 +17,9 @@ class HardwareController extends Controller
     public function index()
     {
         $hardwares = Hardware::all();
-        //$hwcategories = HWCategory::all();
-        //$manufacturers = Manufacturer::all();
-        return view('hardwares', compact('hardwares', /*'hwcategories', 'manufacturers'*/));
+        $hwcategories = HWCategory::all();
+        $manufacturers = Manufacturer::all();
+        return view('hardwares', compact('hardwares', 'hwcategories', 'manufacturers'));
     }
 
    /**
@@ -29,9 +29,9 @@ class HardwareController extends Controller
      */
     public function create()
     {
-        //$hwcategories = HWCategory::all();
-        //$manufacturers = Manufacturer::all();
-        return view('hardwares.create', /*compact('hwcategories', 'manufacturers')*/);
+        $hwcategories = HWCategory::all();
+        $manufacturers = Manufacturer::all();
+        return view('hardwares.create', compact('hwcategories', 'manufacturers'));
     }
 
     /**
@@ -85,10 +85,10 @@ class HardwareController extends Controller
      */
     public function edit($id)
     {
-        //$hwcategories = HWCategory::all();
-        //$manufacturers = Manufacturer::all();
+        $hwcategories = HWCategory::all();
+        $manufacturers = Manufacturer::all();
         $hardware = Hardware::find($id);
-        return view('hardwares.edit', compact('hardware', /*'hwcategories', 'manufacturers'*/));
+        return view('hardwares.edit', compact('hardware', 'hwcategories', 'manufacturers'));
     }
 
     /**
