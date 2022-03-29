@@ -19,12 +19,12 @@
 
         @foreach($purchases AS $purchase)
         <tr>
-          <td>{{ $manufacturer->id }}</td>
-          <td>{{ $manufacturer->company }}</td>
-          <td>{{ $manufacturer->sales_email }}</td>
-          <td>{{ $manufacturer->sales_number }}</td>
-          <td>{{ $manufacturer->tech_email }}</td>
-          <td>{{ $manufacturer->tech_number }}</td>
+          <td>{{ $purchase->id }}</td>
+          <td>{{ $purchase->invoice }}</td>
+          <td>{{ $purchase->price }}</td>
+          <td>{{ $purchase->hardware_id }}</td>
+          <td>{{ $purchase->userinfo_id }}</td>
+          <td>{{ $purchase->purchased_on }}</td>
           <td><a class="btn btn-default btn-sm" href="{{ route('purchases.show',['purchase'=>$purchase->id]) }}">View</a></td>
         </tr>
         @endforeach
