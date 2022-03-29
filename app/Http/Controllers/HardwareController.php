@@ -87,7 +87,6 @@ class HardwareController extends Controller
     {
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
-
         $hardware = Hardware::find($id);
         return view('hardwares.edit', compact('hardware', 'hwcategories', 'manufacturers'));
     }
