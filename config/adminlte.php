@@ -248,7 +248,7 @@ return [
             'submenu' => [
                 
                 [
-                    'text' => 'Hardware List',
+                    'text' => 'By Hardware',
                     'url'  => 'hardwares',
                     'icon' => 'fas fa-fw fa-list',
                 ],
