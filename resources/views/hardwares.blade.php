@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Hardware')
+@section('title', 'Hardware List')
 
 @section('content_header')
-    <h1>Hardware</h1>
+    <h1>Hardware List</h1>
 @stop
 
 @section('content')
@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>Name</th><th>Category</th><th>CPU</th><th>RAM</th><th>Storage</th><th>Service</th><th>Software</th><th>Price</th><th>Manufacturer</th>
+          <th style="width: 10px">#</th><th>Name</th><th>Category</th><th>CPU</th><th>RAM</th><th>Storage</th><th>Software</th><th>Manufacturer</th>
         </tr>
       </thead>
       <tbody>
@@ -25,10 +25,9 @@
           <td>{{ $hardware->cpu }}</td>
           <td>{{ $hardware->ram }}</td>
           <td>{{ $hardware->storage }}</td>
-          <td>{{ $hardware->service }}</td>
           <td>{{ $hardware->software }}</td>
-          <td>{{ $hardware->price }}</td>
           <td>{{ $hardware->manufacturer_id }}</td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
