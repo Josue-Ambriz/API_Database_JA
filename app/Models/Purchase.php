@@ -13,16 +13,16 @@ class Purchase extends Model
     use HasFactory;
     protected $fillable = ['invoice', 'price', 'hardware_id', 'userinfo_id', 'purchased_on'];
    
-   public function userinfo()
-   {
-       return $this->belongsTo(UserInfo::class);
-   }
-                           
-    public function hardware()
+   public function hardware()
     {
         return $this->belongsTo(Hardware::class);
     }
     
+    public function userinfo()
+   {
+       return $this->belongsTo(UserInfo::class);
+   }
+
     public function note()
     {
       return $this->hasMany(Note::class);
