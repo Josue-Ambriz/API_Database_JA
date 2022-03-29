@@ -27,15 +27,15 @@ Route::get('/manufacturers', function () {
 });
 Route::resource('/manufacturers', ManufacturerController::class);
 
-Route::get('/contactinfos', function () {
+/*Route::get('/contactinfos', function () {
     return view('contactinfos');
 });
-Route::resource('/contactinfos', ContactInfoController::class);
+Route::resource('/contactinfos', ContactInfoController::class);*/
 
-Route::get('/hardwares', function () {
+/*Route::get('/hardwares', function () {
     return view('hardwares');
 });
-Route::resource('/hardwares', HardwareController::class);
+Route::resource('/hardwares', HardwareController::class);*/
 
 
 Route::get('/db-test', function () {
