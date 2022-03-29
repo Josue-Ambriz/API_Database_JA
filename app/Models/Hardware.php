@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\HwCategory;
+use App\Models\HWCategory;
 use App\Models\Manufacturer;
 use App\Models\Purchase;
 use App\Models\UserInfo;
@@ -16,7 +16,7 @@ class Hardware extends Model
     
     public function hwcategory()
     {
-        return $this->belongsTo(HwCategory::class);
+        return $this->belongsTo(HWCategory::class);
     }
     
     public function manufacturer()
