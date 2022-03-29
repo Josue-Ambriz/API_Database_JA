@@ -253,15 +253,16 @@ return [
                     'icon' => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'By Manufacturer',
-                    'url'  => 'manufacturers',
-                    'icon' => 'fas fa-fw fa-hdd',
-                ],
-                [
                     'text' => 'By Category',
                     'url'  => 'hwcategories',
                     'icon' => 'fas fa-fw fa-file',
                 ],
+                [
+                    'text' => 'By Manufacturer',
+                    'url'  => 'manufacturers',
+                    'icon' => 'fas fa-fw fa-hdd',
+                ],
+
             ],
         ],
 
