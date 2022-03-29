@@ -11,7 +11,7 @@ use App\Models\Purchase;
 class Hardware extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'hwcategory_id', 'cpu', 'ram', 'storage', 'software', 'price', 'manufacturer_id'];
+    protected $fillable = ['name', 'hwcategory_id', 'cpu', 'ram', 'storage', 'software', 'manufacturer_id'];
     
     public function hwcategory()
     {
