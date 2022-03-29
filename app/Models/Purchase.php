@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\UserInfo;
 use App\Models\Hardware;
+use App\Models\UserInfo;
 use App\Models\Note;
 
 class Purchase extends Model
