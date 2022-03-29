@@ -10,9 +10,9 @@ class Manufacturer extends Model
 {
     use HasFactory;
     protected $fillable = ['company', 'sales_email', 'sales_number', 'tech_email', 'tech_number'];
-}
 
-public function hardware()
-{
-    return $this->hasMany(Hardware::class);
+    public function hardware()
+    {
+        return $this->hasMany(Hardware::class);
+    }
 }
