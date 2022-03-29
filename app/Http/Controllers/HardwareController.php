@@ -16,10 +16,10 @@ class HardwareController extends Controller
      */
     public function index()
     {
-        $hardwares = Hardware::all();
+        $hardware = Hardware::all();
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
-        return view('hardwares', compact('hardwares', 'hwcategories', 'manufacturers'));
+        return view('hardware', compact('hardware', 'hwcategories', 'manufacturers'));
     }
 
    /**
@@ -31,7 +31,7 @@ class HardwareController extends Controller
     {
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
-        return view('hardwares.create', compact('hwcategories', 'manufacturers'));
+        return view('hardware.create', compact('hwcategories', 'manufacturers'));
     }
 
     /**
@@ -74,7 +74,7 @@ class HardwareController extends Controller
     public function show($id)
     {
         $hardware = Hardware::find($id);
-        return view('hardwares.show', compact('hardware'));
+        return view('hardware.show', compact('hardware'));
     }
         
     /**
@@ -88,7 +88,7 @@ class HardwareController extends Controller
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
         $hardware = Hardware::find($id);
-        return view('hardwares.edit', compact('hardware', 'hwcategories', 'manufacturers'));
+        return view('hardware.edit', compact('hardware', 'hwcategories', 'manufacturers'));
     }
 
     /**
