@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('hwcategory_id')->constrained('hwcategories')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('manufacturer_id')->constrained('manufacturers')->onDelete('cascade')->onUpdate('cascade');
             $table->string('cpu');
             $table->string('ram');
             $table->string('storage');
             $table->string('software');
-            $table->foreignId('manufacturer_id')->constrained('manufacturers')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
