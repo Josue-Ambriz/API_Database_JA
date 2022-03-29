@@ -14,12 +14,15 @@
     <div><p>{{ $manufacturer->tech_email; }}</p></div>
     <div><p>{{ $manufacturer->tech_number; }}</p></div>
     
-    <h4><div><a href="{{route('manufacturers.edit', ['manufacturer'=>$manufacturer->id]) }}" class="btn btn-primary" >Edit</a>
-    @csrf
-    @method('delete')
-    <form style="display:inline;" class="delete" action="{{route('manufacturers.destroy', ['manufacturer'=>$manufacturer->id])}}" method="POST">
-    <button type="submit" class="btn btn-danger">Delete</button>
-    @csrf
-    </form>
-    </div></h4>
+    <h4>
+        <div>
+            <a href="{{route('manufacturers.edit', ['manufacturer'=>$manufacturer->id]) }}" class="btn btn-primary" >Edit</a>
+            @csrf
+            @method('delete')
+            <form style="display:inline;" class="delete" action="{{route('manufacturers.destroy', ['manufacturer'=>$manufacturer->id])}}" method="POST">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            @csrf
+            </form>
+        </div>
+    </h4>
 @stop
