@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\HWCategoryController;
-//use App\Http\Controllers\ContactInfoController;
+use App\Http\Controllers\ContactInfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +40,8 @@ Route::resource('/hwcategories', HWCategoryController::class);
 
 /*Route::get('/contactinfos', function () {
     return view('contactinfos');
-});
-Route::resource('/contactinfos', ContactInfoController::class);*/
+});*/
+Route::resource('/contactinfos', ContactInfoController::class);
 
 Route::get('/db-test', function () {
     try {         
