@@ -23,6 +23,7 @@
           <td>{{ $contactinfo->owner }}</td>
           <td>{{ $contactinfo->info }}</td>
           <td>{{ $contactinfo->email }}</td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('contactinfos.show',['contactinfo'=>$contactinfo->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
