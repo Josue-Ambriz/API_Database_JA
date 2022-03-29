@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Note;
-use App\Models\Hardware;
+use App\Models\Purchase;
 
 class NoteController extends Controller
 {
@@ -16,7 +16,8 @@ class NoteController extends Controller
     public function index()
     {
         $notes = Notes::all();
-        return view('manufacturers', compact('manufacturers'));
+        $purchases = Purchase::all();
+        return view('notes', compact('notes', 'purchases'));
     }
 
    /**
@@ -26,7 +27,7 @@ class NoteController extends Controller
      */
     public function create()
     {
-        return view('manufacturers.create');
+        return view('notes.create');
     }
 
     /**
@@ -38,9 +39,9 @@ class NoteController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([ 
-           'company' => 'required',
-           'sales_email' => 'required',
-           'sales_number' => 'required',
+           'note' => 'required',
+           'hardware_id' => 'required',
+           'service' => 'required',
            'tech_email' => 'required',
            'tech_number' => 'required',
         ]);
