@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\HWCategory;
 use App\Models\Manufacturer;
 use App\Models\Purchase;
-use App\Models\UserInfo;
 
 class Hardware extends Model
 {
@@ -27,10 +26,5 @@ class Hardware extends Model
     public function purchase()
     {
         return $this->hasOne(Purchase::class);
-    }
-    
-        public function userinfo()
-    {
-        return $this->hasMany(UserInfo::class);
     }
 }
