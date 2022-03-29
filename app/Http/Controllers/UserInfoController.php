@@ -93,7 +93,7 @@ class UserInfoController extends Controller
            'number' => 'required',
         ]);
         
-       $userinfo = UserInfo::where('id', $id)->([
+       $userinfo = UserInfo::where('id', $id)->update([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
