@@ -26,22 +26,18 @@ Route::get('/', function () {
 Route::get('/hardwares', function () {
     return view('hardwares');
 });
-Route::resource('/hardwares', HardwareController::class);
 
-/*Route::get('/manufacturers', function () {
+Route::get('/manufacturers', function () {
     return view('manufacturers');
-});*/
-Route::resource('/manufacturers', ManufacturerController::class);
+});
 
-/*Route::get('/hwcategories', function () {
+Route::get('/hwcategories', function () {
     return view('hwcategories');
-});*/
-Route::resource('/hwcategories', HWCategoryController::class);
+});
 
-/*Route::get('/contactinfos', function () {
+Route::get('/contactinfos', function () {
     return view('contactinfos');
-});*/
-Route::resource('/contactinfos', ContactInfoController::class);
+});
 
 Route::get('/db-test', function () {
     try {         
@@ -60,3 +56,8 @@ Route::get('/db-migrate-refresh', function () {
     Artisan::call('migrate:refresh');
     echo Artisan::output();
 });
+
+Route::resource('/hardwares', HardwareController::class);
+Route::resource('/manufacturers', ManufacturerController::class);
+Route::resource('/hwcategories', HWCategoryController::class);
+Route::resource('/contactinfos', ContactInfoController::class);
