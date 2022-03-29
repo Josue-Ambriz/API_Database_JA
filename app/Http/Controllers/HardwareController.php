@@ -74,7 +74,7 @@ class HardwareController extends Controller
     public function show($id)
     {
         $hardware = Hardware::find($id);
-        return view('hardwares.show',compact('hardware'));
+        return view('hardwares.show', compact('hardware'));
     }
         
     /**
