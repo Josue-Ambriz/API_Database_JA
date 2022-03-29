@@ -259,7 +259,7 @@ return [
                 ],
                 [
                     'text' => 'By Category',
-                    'url'  => 'categories',
+                    'url'  => 'hwcategories',
                     'icon' => 'fas fa-fw fa-file',
                 ],
             ],
