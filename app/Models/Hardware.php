@@ -25,6 +25,6 @@ class Hardware extends Model
     
     public function purchase()
     {
-        return $this->hasOne(Purchase::class);
+        return $this->hasMany(Purchase::class);
     }
 }
