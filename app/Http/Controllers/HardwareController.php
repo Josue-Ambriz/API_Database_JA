@@ -19,7 +19,7 @@ class HardwareController extends Controller
         $hardwares = Hardware::all();
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
-        return view('hardwares',compact('hardwares', 'hwcategories', 'manufacturers'));
+        return view('hardwares', compact('hardwares', 'hwcategories', 'manufacturers'));
     }
 
    /**
