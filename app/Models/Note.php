@@ -10,9 +10,9 @@ class Note extends Model
 {
     use HasFactory;
     protected $fillable = ['note', 'hardware_id', 'service'];
-}
 
-public function hardware()
-{
-    return $this->belongsTo(Hardware::class);
+    public function hardware()
+    {
+        return $this->belongsTo(Hardware::class);
+    }
 }
