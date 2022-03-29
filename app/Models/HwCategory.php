@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Hardware;
 
-class HWCategory extends Model
+class HwCategory extends Model
 {
     use HasFactory;
     protected $fillable = ['type'];
