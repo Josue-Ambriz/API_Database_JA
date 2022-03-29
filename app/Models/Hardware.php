@@ -13,7 +13,6 @@ class Hardware extends Model
 {
     use HasFactory;
     protected $fillable = ['name', 'hwcategory_id', 'cpu', 'ram', 'storage', 'software', 'price', 'manufacturer_id'];
-    protected $table = 'hardwares';
     
     public function hwcategory()
     {
