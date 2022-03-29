@@ -45,7 +45,7 @@ class NoteController extends Controller
            'service' => 'required',
         ]);
         
-       $manufacturer = Manufacturer::create([
+       $note = Note::create([
             'note' => $request->note,
             'hardware_id' => $request->hardware_id,
             'service' => $request->sales_number,
@@ -63,7 +63,7 @@ class NoteController extends Controller
     public function show($id)
     {
         $note = Note::find($id);
-        return view('notes.show',compact('note'));
+        return view('notes.show', compact('note'));
     }
         
     /**
@@ -76,7 +76,7 @@ class NoteController extends Controller
     {
         $hardwares = Hardware::all();
         $note = Note::find($id);
-        return view('notes.edit',compact('note', 'hardwares'));
+        return view('notes.edit', compact('note', 'hardwares'));
     }
 
     /**
