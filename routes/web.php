@@ -23,9 +23,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/hardwares', function () {
+Route::get('/hardwares', function () {
     return view('hardwares');
-});*/
+});
 Route::resource('/hardwares', HardwareController::class);
 
 /*Route::get('/manufacturers', function () {
