@@ -15,7 +15,7 @@ class NoteController extends Controller
      */
     public function index()
     {
-        $notes = Notes::all();
+        $notes = Note::all();
         $hardwares = Hardware::all();
         return view('notes', compact('notes', 'hardwares'));
     }
