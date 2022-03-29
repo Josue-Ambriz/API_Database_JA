@@ -34,7 +34,6 @@ Route::get('/manufacturers', function () {
     return view('manufacturers');
 });
 
-
 Route::get('/hardwares', function () {
     return view('hardwares');
 });
