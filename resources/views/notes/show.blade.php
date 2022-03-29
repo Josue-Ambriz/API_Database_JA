@@ -9,7 +9,7 @@
 @section('content')
     <h2>{{ $note->title; }}</h2>
     <div><p>{{ $note->note; }}</p></div>
-    <div><p>{{ $note->hardware_id; }}</p></div>
+    <div><p>{{ $note->purchase_id; }}</p></div>
     <div><p>{{ $note->service; }}</p></div>
     
     <h4>
