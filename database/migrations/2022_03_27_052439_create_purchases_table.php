@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->string('invoice');
-            $table->integer('price');
+            $table->float('price');
             $table->foreignId('hardware_id')->constrained('hardwares')->onDelete('cascade');
             $table->foreignId('userinfo_id')->constrained('usersinfos')->onDelete('cascade')->nullable();
             $table->date('purchased_on');
