@@ -27,7 +27,7 @@
           <td>{{ $hardware->storage }}</td>
           <td>{{ $hardware->software }}</td>
           <td>{{ $hardware->manufacturer_id }}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('hardwares.show',['hardware'=>$hardware->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
