@@ -14,10 +14,8 @@ class UserInfoController extends Controller
      */
     public function index()
     {
-        $hardwares = Hardware::all();
-        $hwcategories = HWCategory::all();
-        $manufacturers = Manufacturer::all();
-        return view('hardwares', compact('hardwares', 'hwcategories', 'manufacturers'));
+        $usersinfos = UserInfo::all();
+        return view('usersinfos', compact('usersinfos'));
     }
 
    /**
@@ -27,7 +25,7 @@ class UserInfoController extends Controller
      */
     public function create()
     {
-        return view('hardwares.create');
+        return view('usersinfos.create');
     }
 
     /**
@@ -39,23 +37,17 @@ class UserInfoController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([ 
-           'name' => 'required',
-           'hwcategory_id' => 'required',
-           'cpu' => 'required',
-           'ram' => 'required',
-           'storage' => 'required',
-           'software' => 'required',
-           'manufacturer_id' => 'required',
+           'first_name' => 'required',
+           'last_name' => 'required',
+           'email' => 'required',
+           'number' => 'required',
         ]);
         
-       $hardware = Hardware::create([
-            'name' => $request->name,
-            'hwcategory_id' => $request->hwcategory_id,
-            'cpu' => $request->cpu,
-            'ram' => $request->ram,
-            'storage' => $request->storage,
-            'software' => $request->software,
-            'manufacturer_id' => $request->manufacturer_id,        
+       $userinfo = UserInfo::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'number' => $request->number,    
         ]);
         
         return $this->index();
@@ -69,8 +61,8 @@ class UserInfoController extends Controller
      */
     public function show($id)
     {
-        $hardware = Hardware::find($id);
-        return view('hardwares.show',compact('hardware'));
+        $userinfo = UserInfo::find($id);
+        return view('usersinfos.show',compact('userinfo'));
     }
         
     /**
@@ -81,11 +73,8 @@ class UserInfoController extends Controller
      */
     public function edit($id)
     {
-        $hwcategories = HWCategory::all();
-        $manufacturers = Manufacturer::all();
-
-        $hardware = Hardware::find($id);
-        return view('hardwares.edit', compact('hardware', 'hwcategories', 'manufacturers'));
+        $userinfo = UserInfo::find($id);
+        return view('usersinfos.edit',compact('userinfo'));
     }
 
     /**
@@ -98,23 +87,17 @@ class UserInfoController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([ 
-           'name' => 'required',
-           'hwcategory_id' => 'required',
-           'cpu' => 'required',
-           'ram' => 'required',
-           'storage' => 'required',
-           'software' => 'required',
-           'manufacturer_id' => 'required',
+           'first_name' => 'required',
+           'last_name' => 'required',
+           'email' => 'required',
+           'number' => 'required',
         ]);
         
-       $hardware = Hardware::where('id', $id)->([
-            'name' => $request->name,
-            'hwcategory_id' => $request->hwcategory_id,
-            'cpu' => $request->cpu,
-            'ram' => $request->ram,
-            'storage' => $request->storage,
-            'software' => $request->software,
-            'manufacturer_id' => $request->manufacturer_id,        
+       $userinfo = UserInfo::where('id', $id)->([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'number' => $request->number,     
         ]);
         
         return $this->show($id);
@@ -128,7 +111,7 @@ class UserInfoController extends Controller
      */
     public function destroy($id)
     {
-        $hardware = Hardware::where('id', $id)->delete();
+        $userinfo = UserInfo::where('id', $id)->delete();
         return $this->index();
         
     }
