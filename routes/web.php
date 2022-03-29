@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManufacturerController;
 //use App\Http\Controllers\ContactInfoController;
 use App\Http\Controllers\HardwareController;
+use App\Http\Controllers\HWCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,11 @@ Route::get('/hardwares', function () {
     return view('hardwares');
 });
 Route::resource('/hardwares', HardwareController::class);
+
+Route::get('/hwcategories', function () {
+    return view('hwcategories');
+});
+Route::resource('/hwcategories', HWCategoryController::class);
 
 
 Route::get('/db-test', function () {
