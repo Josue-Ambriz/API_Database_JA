@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManufacturerController;
 //use App\Http\Controllers\ContactInfoController;
-//use App\Http\Controllers\HardwareController;
+use App\Http\Controllers\HardwareController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +32,10 @@ Route::resource('/manufacturers', ManufacturerController::class);
 });
 Route::resource('/contactinfos', ContactInfoController::class);*/
 
-/*Route::get('/hardwares', function () {
+Route::get('/hardwares', function () {
     return view('hardwares');
 });
-Route::resource('/hardwares', HardwareController::class);*/
+Route::resource('/hardwares', HardwareController::class);
 
 
 Route::get('/db-test', function () {
