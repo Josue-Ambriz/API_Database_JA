@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Contact Information')
+@section('title', 'Website Information')
 
 @section('content_header')
-    <h1>Contact Information</h1>
+    <h1>Website Information</h1>
 @stop
 
 @section('content')
@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>Sales Name</th><th>Sales Email</th><th>Sales Number</th><th>Tech Name</th><th>Tech Email</th><th>Tech Number</th>
+          <th style="width: 10px">#</th><th>Owner</th><th>Information</th><th>Email</th>
         </tr>
       </thead>
       <tbody>
@@ -20,12 +20,9 @@
         @foreach($contactinfos AS $contactinfo)
         <tr>
           <td>{{ $contactinfo->id }}</td>
-          <td>{{ $contactinfo->sales_name }}</td>
-          <td>{{ $contactinfo->sales_email }}</td>
-          <td>{{ $contactinfo->sales_number }}</td>
-          <td>{{ $contactinfo->tech_name }}</td>
-          <td>{{ $contactinfo->tech_email }}</td>
-          <td>{{ $contactinfo->tech_number }}</td>
+          <td>{{ $contactinfo->owner }}</td>
+          <td>{{ $contactinfo->info }}</td>
+          <td>{{ $contactinfo->email }}</td>
         </tr>
         @endforeach
       </tbody>
