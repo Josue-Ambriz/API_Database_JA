@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\ContactInfo;
 use App\Models\Note;
 
-class contactinfoController extends Controller
+class ContactInfoController extends Controller
 {
     /**
      * Display a listing of the resource.
