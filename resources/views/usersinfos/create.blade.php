@@ -12,7 +12,7 @@
     <x-adminlte-input name="first_name" label="First Name" />
     <x-adminlte-input name="last_name" label="Last Name" />
     <x-adminlte-input name="email" label="Email" />
-    <x-adminlte-input name="number" label="Number" />
+    <x-adminlte-input name="phone" label="Phone Number" />
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
