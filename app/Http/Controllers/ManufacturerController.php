@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Manufacturer;
 
-class manufacturerController extends Controller
+class ManufacturerController extends Controller
 {
     /**
      * Display a listing of the resource.
