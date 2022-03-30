@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Purchase;
+use App\Models\Hardware;
+use App\Models\UserInfo;
 
 class PurchaseController extends Controller
 {
@@ -14,8 +16,10 @@ class PurchaseController extends Controller
      */
     public function index()
     {
+        $hardwares = Hardware::all();
+        $usersinfos = UserInfo::all();
         $purchases = Purchase::all();
-        return view('purchases', compact('purchases'));
+        return view('purchases', compact('purchases', 'usersinfos', 'hardwares'));
     }
 
    /**
@@ -25,7 +29,9 @@ class PurchaseController extends Controller
      */
     public function create()
     {
-        return view('purchases.create');
+        $hardwares = Hardware::all();
+        $usersinfos = UserInfo::all();
+        return view('purchases.create', compact('hardwares', 'usersinfos'));
     }
 
     /**
@@ -75,6 +81,8 @@ class PurchaseController extends Controller
      */
     public function edit($id)
     {
+        $hardwares = Hardware::all();
+        $usersinfos = UserInfo::all();
         $purchase = Purchase::find($id);
         return view('purchases.edit', compact('purchase'));
     }
