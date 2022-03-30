@@ -7,7 +7,7 @@ use App\Models\Hardware;
 use App\Models\HWCategory;
 use App\Models\Manufacturer;
 
-class hardwareController extends Controller
+class HardwareController extends Controller
 {
     /**
      * Display a listing of the resource.
