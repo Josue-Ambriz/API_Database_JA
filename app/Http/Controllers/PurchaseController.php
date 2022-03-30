@@ -19,7 +19,7 @@ class PurchaseController extends Controller
         $hardwares = Hardware::all();
         $usersinfos = UserInfo::all();
         $purchases = Purchase::all();
-        return view('purchases', compact('purchases', 'usersinfos', 'hardwares'));
+        return view('purchases', compact('purchases', 'hardwares', 'usersinfos'));
     }
 
    /**
