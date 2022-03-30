@@ -13,7 +13,7 @@
   <x-adminlte-input name="first_name" value="{{ $userinfo->first_name }}" label="Edit First Name" />
   <x-adminlte-input name="last_name" value="{{ $userinfo->last_name }}" label="Edit Last Name" />
   <x-adminlte-input name="email" value="{{ $userinfo->email }}" label="Edit Email" />
-  <x-adminlte-input name="number" value="{{ $userinfo->number }}" label="Edit Number" />
+  <x-adminlte-input name="phone" value="{{ $userinfo->phone }}" label="Edit Phone Number" />
   <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
