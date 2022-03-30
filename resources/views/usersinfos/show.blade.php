@@ -11,7 +11,7 @@
     <div><p>{{ $userinfo->first_name; }}</p></div>
     <div><p>{{ $userinfo->last_name; }}</p></div>
     <div><p>{{ $userinfo->email; }}</p></div>
-    <div><p>{{ $userinfo->number; }}</p></div>
+    <div><p>{{ $userinfo->phone; }}</p></div>
     
     <h4>
         <div>
