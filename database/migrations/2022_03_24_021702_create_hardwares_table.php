@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('hardwares', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('hwcategory_id')->constrained('hwcategories');
+            $table->foreignId('hwcategory_id')->constrained('hwcategories')->onDelete('cascade');
             $table->string('cpu');
             $table->string('ram');
             $table->string('storage');
             $table->string('software');
-            $table->foreignId('manufacturer_id')->constrained('manufacturers');
+            $table->foreignId('manufacturer_id')->constrained('manufacturers')->onDelete('cascade');
             $table->timestamps();
         });
     }
