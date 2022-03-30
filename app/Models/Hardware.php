@@ -11,6 +11,7 @@ use App\Models\Purchase;
 class Hardware extends Model
 {
     use HasFactory;
+    protected $table = 'hardwares';
     protected $fillable = ['name', 'hwcategory_id', 'cpu', 'ram', 'storage', 'software', 'manufacturer_id'];
     
     public function hwcategory()
