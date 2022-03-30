@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('owner');
             $table->string('info');
             $table->string('email');
+            $table->string('note_id');
             $table->timestamps();
        });     
     }
