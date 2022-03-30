@@ -11,6 +11,7 @@ use App\Models\Note;
 class Purchase extends Model
 {
     use HasFactory;
+    protected $table = 'purchases';
     protected $fillable = ['invoice', 'price', 'hardware_id', 'userinfo_id', 'purchased_on'];
    
    public function hardware()
