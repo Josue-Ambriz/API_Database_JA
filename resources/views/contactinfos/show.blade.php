@@ -11,6 +11,7 @@
     <div><p>{{ $contactinfo->owner; }}</p></div>
     <div><p>{{ $contactinfo->info; }}</p></div>
     <div><p>{{ $contactinfo->email; }}</p></div>
+    <div><p>{{ $contactinfo->note_id; }}</p></div>
     
    <h4>
         <div>
