@@ -48,7 +48,7 @@ class noteController extends Controller
        $note = Note::create([
             'note' => $request->note,
             'purchase_id' => $request->purchase_id,
-            'service' => $request->sales_number,
+            'service' => $request->service,
         ]);
         
         return $this->index();
