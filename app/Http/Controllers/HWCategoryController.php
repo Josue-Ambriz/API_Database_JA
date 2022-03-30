@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\HWCategory;
 
-class hwcategoryController extends Controller
+class HWCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
