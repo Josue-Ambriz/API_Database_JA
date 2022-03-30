@@ -9,6 +9,7 @@ use App\Models\Note;
 class ContactInfo extends Model
 {
     use HasFactory;
+    protected $table = 'contactinfos';
     protected $fillable = ['owner', 'info', 'email', 'note_id'];
     
     public function note()
