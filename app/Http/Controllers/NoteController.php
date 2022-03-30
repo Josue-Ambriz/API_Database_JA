@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Note;
 use App\Models\Purchase;
 
-class noteController extends Controller
+class NoteController extends Controller
 {
     /**
      * Display a listing of the resource.
