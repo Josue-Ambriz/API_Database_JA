@@ -40,12 +40,14 @@ class ContactInfoController extends Controller
            'owner' => 'required',
            'info' => 'required',
            'email' => 'required',
+           'note_id' => 'required',
         ]);
         
        $contactinfo = ContactInfo::create([
            'owner' => $request->owner,
            'info' => $request->info,
            'email' => $request->email,
+           'note_id' => $request->notes,
         ]);
         
         return $this->index();
@@ -88,12 +90,14 @@ class ContactInfoController extends Controller
             'owner' => 'required',
             'info' => 'required',
             'email' => 'required',
+            'note_id' => 'required',
         ]);
 
         $contactinfo = ContactInfo::where('id',$id)->update([
             'owner' => $request->owner,
             'info' => $request->info,
             'email' => $request->email,
+            'note_id' => $request->notes,
         ]);
         return $this->show($id);
     }
