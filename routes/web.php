@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HWCategoryController;
-use App\Http\Controllers\ManufacturerController;
-use App\Http\Controllers\HardwareController;
-use App\Http\Controllers\UserInfoController;
-use App\Http\Controllers\PurchaseController;
-use App\Http\Controllers\NoteController;
-use App\Http\Controllers\ContactInfoController;
+use App\Http\Controllers\hwcategoryController;
+use App\Http\Controllers\manufacturerController;
+use App\Http\Controllers\hardwareController;
+use App\Http\Controllers\userInfoController;
+use App\Http\Controllers\purchaseController;
+use App\Http\Controllers\noteController;
+use App\Http\Controllers\contactinfoController;
 
 /*
 |--------------------------------------------------------------------------
