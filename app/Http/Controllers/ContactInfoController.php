@@ -50,7 +50,7 @@ class ContactInfoController extends Controller
            'owner' => $request->owner,
            'info' => $request->info,
            'email' => $request->email,
-           'note_id' => $request->notes,
+           'note_id' => $request->note_id,
         ]);
         
         return $this->index();
@@ -101,7 +101,7 @@ class ContactInfoController extends Controller
             'owner' => $request->owner,
             'info' => $request->info,
             'email' => $request->email,
-            'note_id' => $request->notes,
+            'note_id' => $request->note_id,
         ]);
         return $this->show($id);
     }
