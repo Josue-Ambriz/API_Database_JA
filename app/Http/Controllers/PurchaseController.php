@@ -16,9 +16,9 @@ class PurchaseController extends Controller
      */
     public function index()
     {
+        $purchases = Purchase::all();
         $hardwares = Hardware::all();
         $usersinfos = UserInfo::all();
-        $purchases = Purchase::all();
         return view('purchases', compact('purchases', 'hardwares', 'usersinfos'));
     }
 
