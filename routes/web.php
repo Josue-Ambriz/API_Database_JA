@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\hwcategoryController;
-use App\Http\Controllers\manufacturerController;
-use App\Http\Controllers\hardwareController;
-use App\Http\Controllers\userinfoController;
-use App\Http\Controllers\purchaseController;
-use App\Http\Controllers\noteController;
-use App\Http\Controllers\contactinfoController;
+use App\Http\Controllers\HWCategoryController;
+use App\Http\Controllers\ManufacturerController;
+use App\Http\Controllers\HardwareController;
+use App\Http\Controllers\UserInfoController;
+use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\NoteController;
+use App\Http\Controllers\ContactInfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,10 +72,10 @@ Route::get('/db-migrate-refresh', function () {
     echo Artisan::output();
 });
 
-Route::resource('/hwcategories', hwcategoryController::class);
-Route::resource('/manufacturers', manufacturerController::class);
-Route::resource('/hardwares', hardwareController::class);
-Route::resource('/usersinfos', userinfoController::class);
+Route::resource('/hwcategories', HWCategoryController::class);
+Route::resource('/manufacturers', ManufacturerController::class);
+Route::resource('/hardwares', HardwareController::class);
+Route::resource('/usersinfos', UserInfoController::class);
 Route::resource('/purchases', purchaseController::class);
 Route::resource('/notes', noteController::class);
 Route::resource('/contactinfos', contactinfoController::class);
