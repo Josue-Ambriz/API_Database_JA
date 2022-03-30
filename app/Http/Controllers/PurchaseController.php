@@ -7,7 +7,7 @@ use App\Models\Purchase;
 use App\Models\Hardware;
 use App\Models\UserInfo;
 
-class purchaseController extends Controller
+class PurchaseController extends Controller
 {
     /**
      * Display a listing of the resource.
