@@ -28,7 +28,7 @@ class ContactInfoController extends Controller
     public function create()
     {
         $notes = Note::all();
-        return view('contactinfos.create', compact );
+        return view('contactinfos.create', compact('notes'));
     }
 
     /**
