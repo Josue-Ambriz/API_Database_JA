@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ContactInfo;
+use App\Models\Note;
 
 class ContactInfoController extends Controller
 {
@@ -14,8 +15,9 @@ class ContactInfoController extends Controller
      */
     public function index()
     {
+        $notes = Note::all();
         $contactinfos = ContactInfo::all();
-        return view('contactinfos', compact('contactinfos'));
+        return view('contactinfos', compact('contactinfos', 'notes'));
     }
 
    /**
@@ -25,7 +27,8 @@ class ContactInfoController extends Controller
      */
     public function create()
     {
-        return view('contactinfos.create');
+        $notes = Note::all();
+        return view('contactinfos.create', compact );
     }
 
     /**
@@ -62,7 +65,7 @@ class ContactInfoController extends Controller
     public function show($id)
     {
         $contactinfo = ContactInfo::find($id);
-        return view('contactinfos.show',compact('contactinfo'));
+        return view('contactinfos.show', compact('contactinfo'));
     }
         
     /**
@@ -73,8 +76,9 @@ class ContactInfoController extends Controller
      */
     public function edit($id)
     {
+        $notes = Note::all();
         $contactinfo = ContactInfo::find($id);
-        return view('contactinfos.edit',compact('contactinfo'));
+        return view('contactinfos.edit', compact('contactinfo', 'notes'));
     }
 
     /**
