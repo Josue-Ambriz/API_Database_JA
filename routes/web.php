@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\hwcategoryController;
 use App\Http\Controllers\manufacturerController;
 use App\Http\Controllers\hardwareController;
-use App\Http\Controllers\userInfoController;
+use App\Http\Controllers\userinfoController;
 use App\Http\Controllers\purchaseController;
 use App\Http\Controllers\noteController;
 use App\Http\Controllers\contactinfoController;
@@ -22,7 +22,7 @@ use App\Http\Controllers\contactinfoController;
 
 URL::forceScheme('https');
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 
@@ -52,7 +52,7 @@ Route::get('/notes', function () {
 
 Route::get('/contactinfos', function () {
     return view('contactinfos');
-});
+});*/
 
 Route::get('/db-test', function () {
     try {         
@@ -72,10 +72,10 @@ Route::get('/db-migrate-refresh', function () {
     echo Artisan::output();
 });
 
-Route::resource('/hwcategories', HWCategoryController::class);
-Route::resource('/manufacturers', ManufacturerController::class);
-Route::resource('/hardwares', HardwareController::class);
-Route::resource('/usersinfos', UserInfoController::class);
-Route::resource('/purchases', PurchaseController::class);
-Route::resource('/notes', NoteController::class);
-Route::resource('/contactinfos', ContactInfoController::class);
+Route::resource('/hwcategories', hwcategoryController::class);
+Route::resource('/manufacturers', manufacturerController::class);
+Route::resource('/hardwares', hardwareController::class);
+Route::resource('/usersinfos', userinfoController::class);
+Route::resource('/purchases', purchaseController::class);
+Route::resource('/notes', noteController::class);
+Route::resource('/contactinfos', contactinfoController::class);
