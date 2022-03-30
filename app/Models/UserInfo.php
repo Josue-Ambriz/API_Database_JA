@@ -9,7 +9,7 @@ use App\Models\Purchase;
 class UserInfo extends Model
 {
     protected $table = 'usersinfos';
-    protected $fillable = ['first_name','last_name', 'email', 'number'];
+    protected $fillable = ['first_name', 'last_name', 'email', 'phone'];
     use HasFactory;
     
     public function purchase()
