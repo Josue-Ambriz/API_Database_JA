@@ -9,6 +9,7 @@ use App\Models\Hardware;
 class HWCategory extends Model
 {
     use HasFactory;
+    protected $table = 'hwcategories';
     protected $fillable = ['type'];
 
     public function hardware()
