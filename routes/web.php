@@ -22,11 +22,11 @@ use App\Http\Controllers\contactinfoController;
 
 URL::forceScheme('https');
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hwcategories', function () {
+/*Route::get('/hwcategories', function () {
     return view('hwcategories');
 });
 
