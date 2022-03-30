@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('invoice');
             $table->float('price');
             $table->foreignId('hardware_id')->constrained('hardwares')->onDelete('cascade');
-            $table->foreignId('userinfo_id')->constrained('usersinfos')->nullable()->onDelete('cascade');
+            $table->foreignId('userinfo_id')->constrained('usersinfos')->onDelete('cascade');
             $table->date('purchased_on');
             $table->timestamps();
         });
