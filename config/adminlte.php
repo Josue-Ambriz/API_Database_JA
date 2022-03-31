@@ -248,17 +248,17 @@ return [
             'submenu' => [
                 
                 [
-                    'text' => 'By Hardware',
+                    'text' => 'Current Hardware',
                     'url'  => 'hardwares',
                     'icon' => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'By Category',
+                    'text' => 'Category Availability',
                     'url'  => 'hwcategories',
                     'icon' => 'fas fa-fw fa-file',
                 ],
                 [
-                    'text' => 'By Manufacturer',
+                    'text' => 'Manufacturers',
                     'url'  => 'manufacturers',
                     'icon' => 'fas fa-fw fa-hdd',
                 ],
