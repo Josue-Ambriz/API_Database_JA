@@ -9,6 +9,7 @@ use App\Models\Purchase;
 class Note extends Model
 {
     use HasFactory;
+    protected $table = 'notes';
     protected $fillable = ['note', 'purchase_id', 'service'];
 
     public function purchase()
