@@ -9,8 +9,8 @@
 @section('content')
 <form method="post" action="{{ route('hardwares.store') }}" >
     @csrf
-    <x-adminlte-input name="name" label="Name of electronic equipment" />
-    <x-adminlte-input name="hwcategory_id" label="Category of electronic equipment" />
+    <x-adminlte-input name="name" label="Name of Electronic Equipment" />
+    <x-adminlte-input name="hwcategory_id" label="Category of Electronic Equipment" />
     <x-adminlte-input name="cpu" label="CPU Information" />
     <x-adminlte-input name="ram" label="RAM Information" />
     <x-adminlte-input name="storage" label="Storage Information" />
