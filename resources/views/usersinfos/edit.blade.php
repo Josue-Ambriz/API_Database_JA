@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('usersinfos.update', ['userinfo'=>$userinfo->id]) }}">
+<form method="post" action="{{ route('usersinfos.update', ['usersinfo'=>$userinfo->id]) }}">
   @csrf
   @method('PUT')
   <x-adminlte-input name="first_name" value="{{ $userinfo->first_name }}" label="Edit First Name" />
