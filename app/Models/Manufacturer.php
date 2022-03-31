@@ -9,7 +9,7 @@ use App\Models\Hardware;
 class Manufacturer extends Model
 {
     use HasFactory;
- protected $table = 'manufacturers';
+    protected $table = 'manufacturers';
     protected $fillable = ['company', 'sales_email', 'sales_number', 'tech_email', 'tech_number'];
 
     public function hardware()
