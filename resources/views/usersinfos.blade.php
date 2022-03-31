@@ -24,7 +24,7 @@
           <td>{{ $userinfo->last_name }}</td>
           <td>{{ $userinfo->email }}</td>
           <td>{{ $userinfo->phone }}</td>
-           <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td> 
+           <td><a class="btn btn-default btn-sm" href="{{ route('usersinfos.show',['userinfo'=>$userinfo->id]) }}">View</a></td> 
         </tr>
         @endforeach
       </tbody>
