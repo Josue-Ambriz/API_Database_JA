@@ -15,9 +15,7 @@
     
     <h4>
         <div>
-            <div style="display: inline">
-              <form style="margin: 0; padding: 0" action="{{ route('usersinfos.destroy', ['userinfo'=>$userinfo->id]) }}" method="POST">
-                <a class="btn btn-default" href="{{ route('usersinfos.edit', ['userinfo'=>$userinfo->id]) }}">Edit</a>
+            <a href="{{route('manufacturers.edit', ['manufacturer'=>$manufacturer->id]) }}" class="btn btn-primary" >Edit</a>
             @method('delete')
             <button type="submit" class="btn btn-danger">Delete</button>
             @csrf
