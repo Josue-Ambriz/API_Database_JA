@@ -26,34 +26,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/hwcategories', function () {
-    return view('hwcategories');
-});
-
-Route::get('/manufacturers', function () {
-    return view('manufacturers');
-});
-
-Route::get('/hardwares', function () {
-    return view('hardwares');
-});
-
-Route::get('/usersinfos', function () {
-    return view('usersinfos');
-});
-
-Route::get('/purchases', function () {
-    return view('purchases');
-});
-
-Route::get('/notes', function () {
-    return view('notes');
-});
-
-Route::get('/contactinfos', function () {
-    return view('contactinfos');
-});*/
-
 Route::get('/db-test', function () {
     try {         
          echo \DB::connection()->getDatabaseName();     
