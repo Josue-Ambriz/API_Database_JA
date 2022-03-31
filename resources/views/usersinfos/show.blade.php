@@ -15,7 +15,7 @@
     
     <h4>
         <div>
-            <a href="{{route('manufacturers.edit', ['manufacturer'=>$manufacturer->id]) }}" class="btn btn-primary" >Edit</a>
+            <a href="{{route('usersinfos.edit', ['userinfo'=>$userinfo->id]) }}" class="btn btn-primary" >Edit</a>
             @method('delete')
             <button type="submit" class="btn btn-danger">Delete</button>
             @csrf
