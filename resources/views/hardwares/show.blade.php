@@ -9,7 +9,7 @@
 @section('content')
     <h2>{{ $hardware->title; }}</h2>
     <div><p>{{ $hardware->name; }}</p></div>
-    <div><p>{{ $hardware->hwcatory_id; }}</p></div>
+    <div><p>{{ $hardware->hwcateory_id; }}</p></div>
     <div><p>{{ $hardware->cpu; }}</p></div>
     <div><p>{{ $hardware->ram; }}</p></div>
     <div><p>{{ $hardware->storage; }}</p></div>
