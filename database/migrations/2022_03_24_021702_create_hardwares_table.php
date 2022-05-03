@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('hardwares', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->foreignId('hwcategory_id')->nullable()->constrained('hwcategories')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('cpu');
-            $table->string('ram');
-            $table->string('storage');
-            $table->string('software');
-            $table->foreignId('manufacturer_id')->nullable()->constrained('manufacturers')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('manufacturer_id')->constrained;
+            $table->foreignId('hwcategory_id')->constrained;
+            $table->string('cpu')->nullable();
+            $table->string('ram')->nullable();
+            $table->string('storage')->nullable();
+            $table->string('software')->nullable();
+            $table->foreignId('user_id')->constrained();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
