@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('ram')->nullable();
             $table->string('storage')->nullable();
             $table->string('software')->nullable();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('usersinfos_id')->constrained();
             $table->softDeletes();
             $table->timestamps();
         });
