@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('hardwares', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('manufacturer_id')->constrained;
-            $table->foreignId('hwcategory_id')->constrained;
+            $table->foreignId('manufacturer_id')->constrained();
+            $table->foreignId('hwcategory_id')->constrained();
             $table->string('cpu')->nullable();
             $table->string('ram')->nullable();
             $table->string('storage')->nullable();
