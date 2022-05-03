@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('equipment_id')->constrained();
             $table->foreignId('purchase_id')->constrained();
             $table->string('service');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
