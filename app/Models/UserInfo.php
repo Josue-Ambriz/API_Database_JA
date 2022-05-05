@@ -12,8 +12,8 @@ class UserInfo extends Model
     protected $fillable = ['first_name', 'last_name', 'email', 'phone'];
     use HasFactory;
     
-    public function purchase()
+    public function hardware()
     {
-        return $this->hasMany(Purchase::class);
+        return $this->belongsToMany(Hardware::class);
     }
 }
