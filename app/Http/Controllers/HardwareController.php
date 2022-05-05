@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Hardware;
 use App\Models\HWCategory;
 use App\Models\Manufacturer;
+use App\Models\Note;
+use App\Models\User;
 
 class HardwareController extends Controller
 {
@@ -18,8 +20,10 @@ class HardwareController extends Controller
     {
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
+        $notes = Note::all();
+        $userinfos = User::all();
         $hardwares = Hardware::all();
-        return view('hardwares', compact('hardwares', 'hwcategories', 'manufacturers'));
+        return view('hardwares', compact('hardwares', 'hwcategories', 'manufacturers', 'notes', 'usersinfos'));
     }
 
    /**
