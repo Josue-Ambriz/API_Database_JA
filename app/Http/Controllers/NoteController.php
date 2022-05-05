@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Note;
-use App\Models\Purchase;
+use App\Models\Hardware;
 
 class NoteController extends Controller
 {
@@ -16,8 +16,8 @@ class NoteController extends Controller
     public function index()
     {
         $notes = Note::all();
-        $purchases = Purchase::all();
-        return view('notes', compact('notes', 'purchases'));
+        $hardwares = Hardware::all();
+        return view('notes', compact('notes', 'hardwares'));
     }
 
    /**
@@ -27,8 +27,8 @@ class NoteController extends Controller
      */
     public function create()
     {
-        $purchases = Purchase::all();
-        return view('notes.create', compact('purchases'));
+        $hardwares = Hardware::all();
+        return view('notes.create', compact('hardwares'));
     }
 
     /**
@@ -41,13 +41,13 @@ class NoteController extends Controller
     {
        $validated = $request->validate([ 
            'note' => 'required',
-           'purchase_id' => 'required',
+           'hardware_id' => 'required',
            'service' => 'required',
         ]);
         
        $note = Note::create([
             'note' => $request->note,
-            'purchase_id' => $request->purchase_id,
+            'hardware_id' => $request->hardware_id,
             'service' => $request->service,
         ]);
         
@@ -74,9 +74,9 @@ class NoteController extends Controller
      */
     public function edit($id)
     {
-        $purchases = Purchase::all();
+        $hardwares = Hardware::all();
         $note = Note::find($id);
-        return view('notes.edit', compact('note', 'purchases'));
+        return view('notes.edit', compact('note', 'hardwares'));
     }
 
     /**
@@ -90,13 +90,13 @@ class NoteController extends Controller
     {
         $validated = $request->validate([ 
            'note' => 'required',
-           'purchase_id' => 'required',
+           'hardware_id' => 'required',
            'service' => 'required',
         ]);
         
        $note = Note::where('id', $id)->update([
             'note' => $request->note,
-            'purchase_id' => $request->purchase_id,
+            'hardware_id' => $request->hardware_id,
             'service' => $request->service,
         ]);
         
