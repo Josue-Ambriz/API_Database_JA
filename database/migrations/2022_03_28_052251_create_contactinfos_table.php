@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('owner');
             $table->string('info');
             $table->string('email');
-            $table->string('note_id')->nullable()->constrained('notes')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('note_id')->nullable();
+            $table->softDeletes();
             $table->timestamps();
        });     
     }
