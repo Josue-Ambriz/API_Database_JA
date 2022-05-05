@@ -12,7 +12,7 @@ class Hardware extends Model
 {
     use HasFactory;
     protected $table = 'hardwares';
-    protected $fillable = ['name', 'hwcategory_id', 'cpu', 'ram', 'storage', 'software', 'manufacturer_id'];
+    protected $fillable = ['manufacturer_id', 'hwcategory_id', 'cpu', 'ram', 'storage', 'software', 'manufacturer_id'];
     
     public function hwcategory()
     {
@@ -24,7 +24,7 @@ class Hardware extends Model
         return $this->belongsTo(Manufacturer::class);
     }
     
-    public function purchase()
+    public function note()
     {
         return $this->hasMany(Purchase::class);
     }
