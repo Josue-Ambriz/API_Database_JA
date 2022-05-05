@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('ram')->nullable();
             $table->string('storage')->nullable();
             $table->string('software')->nullable();
+            $table->string('invoice');
             $table->string('price');
             $table->string('purchased_on');
             $table->foreignId('userinfo_id')->constrained();
