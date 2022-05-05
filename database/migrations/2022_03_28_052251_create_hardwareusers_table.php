@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contactinfos', function (Blueprint $table) {
-            $table->id();
-            $table->string('owner');
-            $table->string('info');
-            $table->string('email');
-            $table->string('note_id')->nullable();
+        Schema::create('hardwareusers', function (Blueprint $table) {
+            $table->foreignId('hardwares_id')->constrained('equipment');
+            $table->foreignId('users_id')->constrained('equipment');
             $table->softDeletes();
             $table->timestamps();
        });     
