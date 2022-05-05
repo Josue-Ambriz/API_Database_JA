@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('model');
             $table->string('price');
             $table->string('purchased_on');
-            $table->foreignId('usersinfos_id')->constrained();
+            $table->foreignId('userinfo_id')->constrained();
             $table->softDeletes();
             $table->timestamps();
         });
