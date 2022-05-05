@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->text('note');
             $table->foreignId('equipment_id')->constrained();
-            $table->foreignId('purchase_id')->constrained();
             $table->string('service');
             $table->softDeletes();
             $table->timestamps();
