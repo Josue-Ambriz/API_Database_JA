@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('hardwareusers', function (Blueprint $table) {
-            $table->foreignId('hardware_id')->constrained('equipment');
-            $table->foreignId('userinfo_id')->constrained('equipment');
+            $table->foreignId('hardware_id')->constrained('hardwares');
+            $table->foreignId('userinfo_id')->constrained('usersinfos');
             $table->softDeletes();
             $table->timestamps();
        });     
