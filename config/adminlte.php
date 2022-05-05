@@ -273,21 +273,9 @@ return [
         ],
         
         [
-            'text' => 'Purchases',
-            'url'  => 'purchases',
-            'icon' => 'fas fa-fw fa-money-bill-wave',
-        ],
-        
-        [
             'text' => 'Notes',
             'url'  => 'notes',
             'icon' => 'fas fa-fw fa-sticky-note',
-        ],
-        
-        [
-            'text' => 'Website Information',
-            'url'  => 'contactinfos',
-            'icon' => 'fas fa-fw fa-store',
         ],
     ],
         
