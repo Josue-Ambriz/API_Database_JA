@@ -21,7 +21,7 @@ class HardwareController extends Controller
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
         $notes = Note::all();
-        $userinfos = User::all();
+        $usersinfos = User::all();
         $hardwares = Hardware::all();
         return view('hardwares', compact('hardwares', 'hwcategories', 'manufacturers', 'notes', 'usersinfos'));
     }
@@ -35,7 +35,8 @@ class HardwareController extends Controller
     {
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
-        return view('hardwares.create', compact('hwcategories', 'manufacturers'));
+        $usersinfos = User::all();
+        return view('hardwares.create', compact('hwcategories', 'manufacturers', 'usersinfos'));
     }
 
     /**
@@ -47,13 +48,16 @@ class HardwareController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([ 
-           'name' => 'required',
+           'manufacturer_id' => 'required',
            'hwcategory_id' => 'required',
+           'name' => 'required',
            'cpu' => 'required',
            'ram' => 'required',
            'storage' => 'required',
            'software' => 'required',
-           'manufacturer_id' => 'required',
+           'invoice' => 'required',
+           'price' => 'required',
+           'purchased_on' => 'required',
         ]);
         
        $hardware = Hardware::create([
@@ -63,7 +67,10 @@ class HardwareController extends Controller
             'ram' => $request->ram,
             'storage' => $request->storage,
             'software' => $request->software,
-            'manufacturer_id' => $request->manufacturer_id,        
+            'manufacturer_id' => $request->manufacturer_id,     
+             
+        if($request['user_id'] != "") {
+            $hardwares->users()->attach($request['user_id']);
         ]);
         
         return $this->index();
@@ -91,8 +98,8 @@ class HardwareController extends Controller
     {
         $hwcategories = HWCategory::all();
         $manufacturers = Manufacturer::all();
-        $hardware = Hardware::find($id);
-        return view('hardwares.edit', compact('hardware', 'hwcategories', 'manufacturers'));
+        $usersinfos = User::all();
+        return view('hardwares.create', compact('hwcategories', 'manufacturers', 'usersinfos'));
     }
 
     /**
@@ -104,27 +111,33 @@ class HardwareController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validated = $request->validate([ 
-           'name' => 'required',
+       $validated = $request->validate([ 
+           'manufacturer_id' => 'required',
            'hwcategory_id' => 'required',
+           'name' => 'required',
            'cpu' => 'required',
            'ram' => 'required',
            'storage' => 'required',
            'software' => 'required',
-           'manufacturer_id' => 'required',
+           'invoice' => 'required',
+           'price' => 'required',
+           'purchased_on' => 'required',
         ]);
         
-       $hardware = Hardware::where('id', $id)->update([
+       $hardware = Hardware::create([
             'name' => $request->name,
             'hwcategory_id' => $request->hwcategory_id,
             'cpu' => $request->cpu,
             'ram' => $request->ram,
             'storage' => $request->storage,
             'software' => $request->software,
-            'manufacturer_id' => $request->manufacturer_id,        
+            'manufacturer_id' => $request->manufacturer_id,     
+             
+        if($request['user_id'] != "") {
+            $hardwares->users()->attach($request['user_id']);
         ]);
         
-        return $this->show($id);
+        return $this->index();
     }
 
     /**
