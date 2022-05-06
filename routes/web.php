@@ -3,11 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HWCategoryController;
 use App\Http\Controllers\ManufacturerController;
-use App\Http\Controllers\UserInfoController;
 use App\Http\Controllers\HardwareController;
-use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\NoteController;
-use App\Http\Controllers\ContactInfoController;
+use App\Http\Controllers\UserInfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +21,6 @@ use App\Http\Controllers\ContactInfoController;
 URL::forceScheme('https');
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
     return view('welcome');
 });
 
