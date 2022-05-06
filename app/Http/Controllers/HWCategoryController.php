@@ -98,8 +98,7 @@ class HWCategoryController extends Controller
      */
     public function destroy($id)
     {
-        $hwcategory = HWCategory::where('id', $id)->delete();
-        return $this->index();
+    
     }
 }
 
