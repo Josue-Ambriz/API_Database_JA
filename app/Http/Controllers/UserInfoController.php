@@ -111,8 +111,6 @@ class UserInfoController extends Controller
      */
     public function destroy($id)
     {
-        $userinfo = UserInfo::where('id', $id)->delete();
-        return $this->index();
-        
+
     }
 }
