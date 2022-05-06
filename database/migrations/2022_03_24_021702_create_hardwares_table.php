@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('manufacturer_id')->constrained();
             $table->foreignId('hwcategory_id')->constrained();
+            $table->string('name');
             $table->string('cpu')->nullable();
             $table->string('ram')->nullable();
             $table->string('storage')->nullable();
