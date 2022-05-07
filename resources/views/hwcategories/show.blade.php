@@ -42,8 +42,8 @@
                     <td>{{ $item->price }}</td>
                     <td>{{ $item->purchase_date }}</td>
                     <td>
-                      <a class="btn btn-primary btn-xs" href="{{ route('hardwares.show',['hardware'=>$item]) }}">View</a>
-                      <form action="{{ route('hardwares.destroy',['hardware'=>$item]) }}" method="POST" >
+                      <a class="btn btn-primary btn-xs" href="{{ route('hardwares.show',['hardwares'=>$item]) }}">View</a>
+                      <form action="{{ route('hardwares.destroy',['hardwares'=>$item]) }}" method="POST" >
                         @csrf
                         <input type="hidden" name="_method" value="DELETE" />
                         <button type="submit" class="btn btn-danger btn-xs">Delete</button>
