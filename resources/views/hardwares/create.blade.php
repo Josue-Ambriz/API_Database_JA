@@ -45,6 +45,7 @@
                   <option value="{{ $item->id }}" {{ old('userinfo_id')==$item->id?'selected':'' }}>{{ $item->name }}</option>
                 @endforeach
               </x-adminlte-select>
+              
           </div>
         </div>
         <div class="card-footer">
