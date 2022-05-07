@@ -68,7 +68,7 @@
 @section('js')
     <script>
     $(document).ready(function() {
-      $('#hardwares_table').DataTable();
+      $('#hardware_table').DataTable();
     });
     </script>
 @stop
