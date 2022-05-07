@@ -125,14 +125,17 @@ class HardwareController extends Controller
         ]);
         
        $hardware = Hardware::create([
-            'name' => $request->name,
-            'hwcategory_id' => $request->hwcategory_id,
-            'cpu' => $request->cpu,
-            'ram' => $request->ram,
-            'storage' => $request->storage,
-            'software' => $request->software,
-            'manufacturer_id' => $request->manufacturer_id,     
-             
+           'manufacturer_id' => $request->manufacturer_id,   
+           'hwcategory_id' => $request->hwcategory_id,
+           'name' => $request->name,
+           'cpu' => $request->cpu,
+           'ram' => $request->ram,
+           'storage' => $request->storage,
+           'software' => $request->software,
+           'invoice' => $request->invoice,
+           'price' => $request->price,
+           'purchased_on' => $request->purchased_on,
+           
         if($request['user_id'] != "") {
             $hardwares->users()->attach($request['user_id']);
         ]);
