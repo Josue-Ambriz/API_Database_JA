@@ -13,7 +13,7 @@
     <div class="col-md-3 col-sm-6 col-12">
       <div class="small-box bg-warning">
         <div class="inner">
-          <h3>{{ $item->hardware->count() }}</h3>
+          <h3>{{ $item->hardwares->count() }}</h3>
           <p>{{ $item->type }} Category</p>
           </div>
           <div class="icon">
