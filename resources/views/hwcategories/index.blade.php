@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <a href="{{ route('categories.create') }}" class="btn btn-success float-right">+ Add</a>
+    <a href="{{ route('hwcategories.create') }}" class="btn btn-success float-right">+ Add</a>
     <h1>Hardware Category</h1>
 @stop
 
