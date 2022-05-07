@@ -34,13 +34,14 @@
                 @foreach($hwcategory->hardware AS $item)
                 <tr>
                     <td>{{ $item->manufacture->type }}</td>
-                    <td>{{ $item->model }}</td>
-                    <td>{{ $item->CPU }}</td>
-                    <td>{{ $item->memory }}</td>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->cpu }}</td>
+                    <td>{{ $item->ram }}</td>
                     <td>{{ $item->storage }}</td>
-                    <td>{{ $item->invoice_number }}</td>
+                    <td>{{ $item->software }}</td>
+                    <td>{{ $item->invoice }}</td>
                     <td>{{ $item->price }}</td>
-                    <td>{{ $item->purchase_date }}</td>
+                    <td>{{ $item->purchased_on }}</td>
                     <td>
                       <a class="btn btn-primary btn-xs" href="{{ route('hardwares.show',['hardwares'=>$item]) }}">View</a>
                       <form action="{{ route('hardwares.destroy',['hardwares'=>$item]) }}" method="POST" >
