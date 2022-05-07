@@ -14,18 +14,19 @@
         <h3 class="card-title">Details</h3>
       </div>
       <div class="card-body">
-        <strong><i class="fas fa-book mr-1"></i> Hardware Specification</strong>
+        <strong><i class="fas fa-book mr-1"></i>Hardware Information</strong>
         <p class="text-muted">
           CPU: {{ $hardware->CPU }}<br>
           RAM: {{ $hardware->memory }}<br>
-          Storage{{ $hardware->storage }}
+          Storage: {{ $hardware->storage }}
+          Software: {{ $hardware->software }}
         </p>
         <hr>
-        <strong><i class="far fa-file-alt mr-1"></i> Purchase Info</strong>
+        <strong><i class="far fa-file-alt mr-1"></i>Purchase Infomation</strong>
         <p class="text-muted">
-          Invoice#: {{ $hardware->invoice_number }}<br>
+          Invoice: {{ $hardware->invoice }}<br>
           Price: $ {{ $hardware->price }}<br>
-          Purchase Date: {{ $hardware->purchase_date }}
+          Purchased On: {{ $hardware->purchased_on }}
         </p>
       </div>
       <div class="card-footer">
