@@ -18,7 +18,7 @@
           @csrf
           <input type="hidden" name="_method" value="PUT" />
           <div class="row">
-              <x-adminlte-input name="name" label="Type of Category" fgroup-class="col-md-12" value="{{ old('name')?:$category->name }}" />
+              <x-adminlte-input name="name" label="Type of Category" fgroup-class="col-md-12" value="{{ old('name')?:$hwcategory->type }}" />
           </div>
         </div>
         <div class="card-footer">
