@@ -31,19 +31,19 @@
                 @endforeach
               </x-adminlte-select>
               
-              <x-adminlte-input name="name" label="Name *" fgroup-class="col-md-6" value="{{ old('name') }}" />
-              <x-adminlte-input name="CPU" label="CPU" fgroup-class="col-md-6" value="{{ old('CPU') }}" />
-              <x-adminlte-input name="RAM" label="RAM" fgroup-class="col-md-6" value="{{ old('RAM') }}" />
-              <x-adminlte-input name="storage" label="Storage" fgroup-class="col-md-6" value="{{ old('storage') }}" />
-              <x-adminlte-input name="software" label="Software" fgroup-class="col-md-6" value="{{ old('software') }}" />
-              <x-adminlte-input name="invoice" label="Invoice *" fgroup-class="col-md-6" value="{{ old('invoice') }}" />
-              <x-adminlte-input name="price" label="Price *" fgroup-class="col-md-6" value="{{ old('price') }}" />
-              <x-adminlte-input name="purchased_on" label="Purchased On *" fgroup-class="col-md-6" type="date" value="{{ old('purchased_on') }}" />
+              <x-adminlte-input name="name" label="Name *" fgroup-class="col-md-6" value="{{ $hardware->name }}" />
+              <x-adminlte-input name="CPU" label="CPU" fgroup-class="col-md-6" value="{{ $hardware->CPU }}" />
+              <x-adminlte-input name="RAM" label="RAM" fgroup-class="col-md-6" value="{{ $hardware->RAM }}" />
+              <x-adminlte-input name="storage" label="Storage" fgroup-class="col-md-6" value="{{ $hardware->storage }}" />
+              <x-adminlte-input name="software" label="Software" fgroup-class="col-md-6" value="{{ $hardware->software }}" />
+              <x-adminlte-input name="invoice" label="Invoice *" fgroup-class="col-md-6" value="{{ $hardware->invoice }}" />
+              <x-adminlte-input name="price" label="Price *" fgroup-class="col-md-6" value="{{ $hardware->price }}" />
+              <x-adminlte-input name="purchased_on" label="Purchased On *" fgroup-class="col-md-6" type="date" value="{{ $hardware->purchased_on }}" />
               <x-adminlte-select name="userinfo_id" label="Current User" fgroup-class="col-md-6" >
               
                 <option value="">N/A</option>
                 @foreach($usersinfos AS $item)
-                  <option value="{{ $item->id }}" {{ old('userinfo_id')==$item->id?'selected':'' }}>{{ $item->name }}</option>
+                  <option value="{{ $item->id }}" {{ $hardware->usersinfos->first()->id==$item->id?'selected':'' }}>{{ $item->name }}</option>
                 @endforeach
               </x-adminlte-select>
               
