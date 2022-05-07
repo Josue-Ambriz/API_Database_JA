@@ -11,5 +11,6 @@
     @csrf
     <x-adminlte-input name="type" label="Type of Category" />
     <x-adminlte-button type="Submit" label="Submit" />
+    <a href = class="btn btn-danger float-right">Cancel</a>
 </form>
 @stop
