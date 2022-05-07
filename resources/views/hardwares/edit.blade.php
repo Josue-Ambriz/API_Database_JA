@@ -16,6 +16,7 @@
         </div>
         <div class="card-body">
           @csrf
+          <input type="hidden" name="_method" value="PUT" />
           <div class="row">
              
              <x-adminlte-select name="manufacturer_id" label="Manufacture *" fgroup-class="col-md-6" >
