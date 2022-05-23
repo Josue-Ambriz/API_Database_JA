@@ -36,4 +36,3 @@
     <script>
     </script>
 @stop
-© 2022 GitHub, Inc.
