@@ -7,13 +7,33 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('usersinfos.update', ['usersinfo'=>$userinfo->id]) }}">
-  @csrf
-  @method('PUT')
-  <x-adminlte-input name="first_name" value="{{ $userinfo->first_name }}" label="Edit First Name" />
-  <x-adminlte-input name="last_name" value="{{ $userinfo->last_name }}" label="Edit Last Name" />
-  <x-adminlte-input name="email" value="{{ $userinfo->email }}" label="Edit Email" />
-  <x-adminlte-input name="phone" value="{{ $userinfo->phone }}" label="Edit Phone Number" />
-  <x-adminlte-button type="Submit" label="Submit" />
-</form>
+<div class="row">
+  <div class="col-md-12">
+    <form action="{{ route('usersinfos.update',['user'=>$userinfo]) }}" method="POST">
+      <div class="card">
+        <div class="card-header p-2">
+          <h3 class="card-title">User Information</h3>
+        </div>
+        <div class="card-body">
+          @csrf
+          <input type="hidden" name="_method" value="PUT" />
+          <div class="row">
+              <x-adminlte-input name="name" label="User Name" fgroup-class="col-md-12" value="{{ old('name')?:$user->name }}" />
+              <x-adminlte-input name="email" label="Email" fgroup-class="col-md-12" value="{{ old('email')?:$user->email }}" />
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="Submit" class="btn btn-primary float-right">Submit</button>
+          <a href="{{ route('users.show',['user'=>$user]) }}" class="btn btn-danger">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+@stop
+
+
+@section('js')
+    <script>
+    </script>
 @stop
