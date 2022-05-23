@@ -7,21 +7,6 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('notes.store') }}" >
-    @csrf
-    <x-adminlte-input name="note" label="Note" />
-    <x-adminlte-input name="purchase_id" label="Purchase ID" />
-    <x-adminlte-input name="service" label="Service" />
-    <x-adminlte-button type="Submit" label="Submit" />
-</form>
-@stop
-
-
-@section('content_header')
-    <h1>{{ $hardware->manufacturer->name }} - {{ $hardware->name }}</h1>
-@stop
-
-@section('content')
 <div class="row">
   <div class="col-md-3">
     <div class="card card-primary">
@@ -33,27 +18,27 @@
         <p class="text-muted">
           CPU: {{ $hardware->CPU }}<br>
           RAM: {{ $hardware->RAM }}<br>
-          Storage{{ $equipment->storage }}
+          Storage{{ $hardware->storage }}
         </p>
         <hr>
         <strong><i class="far fa-file-alt mr-1"></i> Purchase Info</strong>
         <p class="text-muted">
-          Invoice#: {{ $equipment->invoice_number }}<br>
-          Price: $ {{ $equipment->price }}<br>
-          Purchase Date: {{ $equipment->purchase_date }}
+          Invoice: {{ $hardware->invoice }}<br>
+          Price: $ {{ $hardware->price }}<br>
+          Purchase Date: {{ $hardware->purchased_on }}
         </p>
       </div>
       <div class="card-footer">
-        <a class="btn btn-success btn-block" href="{{ route('equipment.edit',['equipment'=>$equipment]) }}">Edit</a>
+        <a class="btn btn-success btn-block" href="{{ route('hardwares.edit',['hardware'=>$hardware]) }}">Edit</a>
       </div>
     </div>
   </div>
 
   <div class="col-md-9">
     <div class="card card-warning">
-      <form action="{{ route('notes.store',['equipment'=>$equipment->id]) }}" method="POST">
+      <form action="{{ route('notes.store',['equipment'=>$hardware->id]) }}" method="POST">
         <div class="card-header">
-          <h3 class="card-title">Add a note</h3>
+          <h3 class="card-title">Add Note</h3>
         </div>
         <div class="card-body">
           @csrf
