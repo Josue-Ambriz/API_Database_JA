@@ -17,10 +17,10 @@
         <div class="card-body">
           @csrf
           <div class="row">
-              <x-adminlte-input name="name" label="First Name" fgroup-class="col-md-12" />
-              <x-adminlte-input name="name" label="Last Name" fgroup-class="col-md-12" />
-              <x-adminlte-input name="name" label="Email" fgroup-class="col-md-12" />
-              <x-adminlte-input name="email" label="Phone" fgroup-class="col-md-12" />
+              <x-adminlte-input name="first_name" label="First Name" fgroup-class="col-md-12" />
+              <x-adminlte-input name="last_name" label="Last Name" fgroup-class="col-md-12" />
+              <x-adminlte-input name="email" label="Email" fgroup-class="col-md-12" />
+              <x-adminlte-input name="phone" label="Phone" fgroup-class="col-md-12" />
           </div>
         </div>
         <div class="card-footer">
