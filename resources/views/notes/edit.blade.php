@@ -18,8 +18,8 @@
         <p class="text-muted">
           CPU: {{ $hardware->CPU }}<br>
           RAM: {{ $hardware->RAM }}<br>
-          Storage{{ $hardware->storage }}
-          Service{{ $hardware->storage }}
+          Storage: {{ $hardware->storage }}
+          Service: {{ $hardware->storage }}
         </p>
         <hr>
         <strong><i class="far fa-file-alt mr-1"></i> Purchase Info</strong>
