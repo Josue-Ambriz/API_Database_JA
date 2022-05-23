@@ -18,7 +18,8 @@
         <table id="hardware_table" class="table" style="width:100%">
             <thead>
                 <tr>
-                    <th>Manufacture</th>
+                    <th>Manufacturer</th>
+                    <th>Category</th>
                     <th>Name</th>
                     <th>CPU</th>
                     <th>RAM</th>
@@ -27,16 +28,17 @@
                     <th>Invoice</th>
                     <th>Price</th>
                     <th>Purchased On</th>
+                    <th>Storage</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($hwcategory->hardware AS $item)
                 <tr>
-                    <td>{{ $item->manufacture->type }}</td>
+                    <td>{{ $item->manufacturer->type }}</td>
                     <td>{{ $item->name }}</td>
-                    <td>{{ $item->cpu }}</td>
-                    <td>{{ $item->ram }}</td>
+                    <td>{{ $item->CPU }}</td>
+                    <td>{{ $item->RAM }}</td>
                     <td>{{ $item->storage }}</td>
                     <td>{{ $item->software }}</td>
                     <td>{{ $item->invoice }}</td>
