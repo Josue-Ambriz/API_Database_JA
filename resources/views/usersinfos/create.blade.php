@@ -17,13 +17,15 @@
         <div class="card-body">
           @csrf
           <div class="row">
-              <x-adminlte-input name="name" label="User Name" fgroup-class="col-md-12" />
-              <x-adminlte-input name="email" label="Email" fgroup-class="col-md-12" />
+              <x-adminlte-input name="name" label="First Name" fgroup-class="col-md-12" />
+              <x-adminlte-input name="name" label="Last Name" fgroup-class="col-md-12" />
+              <x-adminlte-input name="name" label="Email" fgroup-class="col-md-12" />
+              <x-adminlte-input name="email" label="Phone" fgroup-class="col-md-12" />
           </div>
         </div>
         <div class="card-footer">
           <button type="Submit" class="btn btn-primary float-right">Submit</button>
-          <a href="{{ route('users.index') }}" class="btn btn-danger">Cancel</a>
+          <a href="{{ route('usersinfos.index') }}" class="btn btn-danger">Cancel</a>
         </div>
       </div>
     </form>
