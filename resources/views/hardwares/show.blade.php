@@ -17,7 +17,7 @@
         <strong><i class="fas fa-book mr-1"></i>Hardware Information</strong>
         <p class="text-muted">
           CPU: {{ $hardware->CPU }}<br>
-          RAM: {{ $hardware->memory }}<br>
+          RAM: {{ $hardware->RAM }}<br>
           Storage: {{ $hardware->storage }}
           Software: {{ $hardware->software }}
         </p>
